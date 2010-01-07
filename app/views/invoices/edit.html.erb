@@ -3,8 +3,8 @@
 <% form_for(@invoice) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :codice %><br />
+   <p>
+    <%= f.label :codice, "Numero Fattura" %><br />
     <%= f.text_field :codice %>
   </p>
   <p>
@@ -12,15 +12,16 @@
     <%= f.date_select :data_fattura %>
   </p>
   <p>
-    <%= f.label :customer_id %><br />
-    <%= f.text_field :customer_id %>
+    <%= f.label :customer_id, "Cliente" %><br />
+    <!--= f.text_field :customer_id %-->
+	<%= select("invoice", "customer_id", Customer.all.collect {|c| [ (!c.ragione_sociale.empty? ? c.ragione_sociale : "#{c.nome} #{c.cognome}") , c.id ] }) %>
   </p>
   <p>
-    <%= f.label :descrizione %><br />
+    <%= f.label :descrizione, "Annotazioni Varie" %><br />
     <%= f.text_area :descrizione %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Aggiorna Fattura' %>
   </p>
 <% end %>
 

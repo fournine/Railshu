@@ -14,7 +14,11 @@ class InvoicesController < ApplicationController
   # GET /invoices/1.xml
   def show
     @invoice = Invoice.find(params[:id])
-
+	#@tot_imponibile = @invoice.jobs.map{|x| x.importo * x.qty}.inject(0){|sum,item| sum + item}
+	#@totale = @invoice.jobs.map{|x| (x.importo * x.qty) + (x.importo * x.qty * x.tipo_iva.aliquota / 100)}.inject(0){|sum,item| sum + item}
+	
+	@tot_imponibile = @invoice.jobs.map{|x| x.importo}.inject(0){|sum,item| sum + item}
+	@totale = @invoice.jobs.map{|x| (x.importo) + (x.importo * x.tipo_iva.aliquota / 100)}.inject(0){|sum,item| sum + item}
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @invoice }
@@ -44,7 +48,7 @@ class InvoicesController < ApplicationController
 
     respond_to do |format|
       if @invoice.save
-        flash[:notice] = 'Invoice was successfully created.'
+        flash[:notice] = "Fattura creata con successo!\nClicca su \"Aggiungi Voce\" per proseguire."
         format.html { redirect_to(@invoice) }
         format.xml  { render :xml => @invoice, :status => :created, :location => @invoice }
       else
@@ -61,7 +65,7 @@ class InvoicesController < ApplicationController
 
     respond_to do |format|
       if @invoice.update_attributes(params[:invoice])
-        flash[:notice] = 'Invoice was successfully updated.'
+        flash[:notice] = 'Fattura modificata con successo!'
         format.html { redirect_to(@invoice) }
         format.xml  { head :ok }
       else

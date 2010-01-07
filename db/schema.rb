@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20100107094020) do
   create_table "jobs", :force => true do |t|
     t.text     "descrizione"
     t.integer  "qty"
-    t.integer  "iva_id"
+    t.integer  "tipo_iva_id"
     t.integer  "invoice_id"
     t.float    "importo"
     t.datetime "created_at"

@@ -3,7 +3,7 @@ class CreateJobs < ActiveRecord::Migration
     create_table :jobs do |t|
       t.text :descrizione
       t.integer :qty
-      t.integer :iva_id
+      t.integer :tipo_iva_id
       t.integer :invoice_id
       t.float :importo
 

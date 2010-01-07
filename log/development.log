@@ -35,3 +35,1816 @@ Migrating to CreateJobs (20100107094020)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("invoices")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tipo_ivas")[0m
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 12:12:00) [GET]
+  [4;36;1mInvoice Load (31.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 1672ms (View: 1625, DB: 31) | 200 OK [http://localhost/invoices]
+
+
+Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-07 12:12:14) [GET]
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/index
+Completed in 219ms (View: 203, DB: 0) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-07 12:12:23) [GET]
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-07 12:12:34) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 172ms (View: 140, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 12:13:51) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 1250ms (View: 1234, DB: 0) | 200 OK [http://localhost/jobs/new]
+  [4;36;1mCustomer Create (16.0ms)[0m   [0;1mINSERT INTO "customers" ("comune", "created_at", "cognome", "nome", "updated_at", "p_iva", "cod_fisc", "ragione_sociale", "indirizzo", "cap") VALUES(NULL, '2010-01-07 11:18:31', NULL, NULL, '2010-01-07 11:18:31', 'dfsdafsad', NULL, 'Prova spa', NULL, NULL)[0m
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" [0m
+  [4;36;1mTipoIva Create (0.0ms)[0m   [0;1mINSERT INTO "tipo_ivas" ("created_at", "updated_at", "descrizione", "aliquota") VALUES('2010-01-07 11:19:16', '2010-01-07 11:19:16', 'beni normali', 20)[0m
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" LIMIT 1[0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;35;1mInvoice Create (0.0ms)[0m   [0mINSERT INTO "invoices" ("data_fattura", "created_at", "updated_at", "descrizione", "customer_id", "codice") VALUES(NULL, '2010-01-07 11:20:35', '2010-01-07 11:20:35', 'fattura di prova', 1, NULL)[0m
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;36;1mJob Create (0.0ms)[0m   [0;1mINSERT INTO "jobs" ("qty", "importo", "created_at", "updated_at", "descrizione", "invoice_id", "iva_id") VALUES(1, 100.0, '2010-01-07 11:22:17', '2010-01-07 11:22:17', 'Taglio siepi', 1, NULL)[0m
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 12:22:51) [GET]
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 123ms (View: 77, DB: 0) | 200 OK [http://localhost/invoices]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-07 12:23:11) [GET]
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 185ms (View: 154, DB: 0) | 200 OK [http://localhost/customers]
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20100107092923)
+Migrating to CreateTipoIvas (20100107093023)
+Migrating to CreateInvoices (20100107093245)
+Migrating to CreateJobs (20100107094020)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("customers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("invoices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20100107092923)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "customers" already exists: CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ragione_sociale" varchar(255), "nome" varchar(255), "cognome" varchar(255), "p_iva" varchar(255), "cod_fisc" varchar(255), "indirizzo" varchar(255), "comune" varchar(255), "cap" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateInvoices (20100107093245)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "invoices" already exists: CREATE TABLE "invoices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "codice" varchar(255), "data_fattura" date, "customer_id" integer, "descrizione" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTipoIvas (20100107093023)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "tipo_ivas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "aliquota" integer, "descrizione" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100107093023')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("customers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("invoices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tipo_ivas")[0m
+  [4;36;1mTipoIva Create (0.0ms)[0m   [0;1mINSERT INTO "tipo_ivas" ("created_at", "updated_at", "descrizione", "aliquota") VALUES('2010-01-07 13:07:50', '2010-01-07 13:07:50', 'beni comuni', 20)[0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" LIMIT 1[0m
+  [4;36;1mTipoIva Load (16.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;35;1mJob Update (0.0ms)[0m   [0mUPDATE "jobs" SET "updated_at" = '2010-01-07 13:08:17' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" ORDER BY jobs.id DESC LIMIT 1[0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20100107092923)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ragione_sociale" varchar(255), "nome" varchar(255), "cognome" varchar(255), "p_iva" varchar(255), "cod_fisc" varchar(255), "indirizzo" varchar(255), "comune" varchar(255), "cap" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100107092923')[0m
+Migrating to CreateTipoIvas (20100107093023)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "tipo_ivas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "aliquota" integer, "descrizione" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100107093023')[0m
+Migrating to CreateInvoices (20100107093245)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "invoices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "codice" varchar(255), "data_fattura" date, "customer_id" integer, "descrizione" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100107093245')[0m
+Migrating to CreateJobs (20100107094020)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descrizione" text, "qty" integer, "tipo_iva_id" integer, "invoice_id" integer, "importo" float, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100107094020')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("customers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("invoices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tipo_ivas")[0m
+  [4;36;1mCustomer Create (0.0ms)[0m   [0;1mINSERT INTO "customers" ("comune", "created_at", "cognome", "nome", "updated_at", "p_iva", "cod_fisc", "ragione_sociale", "indirizzo", "cap") VALUES(NULL, '2010-01-07 13:11:44', NULL, NULL, '2010-01-07 13:11:44', NULL, NULL, 'Prova Spa', NULL, NULL)[0m
+  [4;35;1mTipoIva Create (0.0ms)[0m   [0mINSERT INTO "tipo_ivas" ("created_at", "updated_at", "descrizione", "aliquota") VALUES('2010-01-07 13:12:20', '2010-01-07 13:12:20', 'Iva comune', 20)[0m
+  [4;36;1mCustomer Load (16.0ms)[0m   [0;1mSELECT * FROM "customers" LIMIT 1[0m
+  [4;35;1mInvoice Create (0.0ms)[0m   [0mINSERT INTO "invoices" ("data_fattura", "created_at", "updated_at", "descrizione", "customer_id", "codice") VALUES(NULL, '2010-01-07 13:13:10', '2010-01-07 13:13:10', 'fattura di prova', 1, NULL)[0m
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" LIMIT 1[0m
+  [4;35;1mJob Create (0.0ms)[0m   [0mINSERT INTO "jobs" ("qty", "importo", "created_at", "updated_at", "descrizione", "invoice_id", "tipo_iva_id") VALUES(NULL, NULL, '2010-01-07 13:15:02', '2010-01-07 13:15:02', 'Manodopera', 1, 1)[0m
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-07 14:15:14) [GET]
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 141ms (View: 94, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-07 14:15:21) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+
+ActionView::TemplateError (undefined method `iva_id' for #<Job:0x472be34>) on line #16 of app/views/jobs/index.html.erb:
+13:   <tr>
+14:     <td><%=h job.descrizione %></td>
+15:     <td><%=h job.qty %></td>
+16:     <td><%=h job.iva_id %></td>
+17:     <td><%=h job.invoice_id %></td>
+18:     <td><%=h job.importo %></td>
+19:     <td><%= link_to 'Show', job %></td>
+
+    app/views/jobs/index.html.erb:16
+    app/views/jobs/index.html.erb:12:in `each'
+    app/views/jobs/index.html.erb:12
+    app/controllers/jobs_controller.rb:7:in `index'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (218.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-07 14:16:49) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 141ms (View: 31, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#edit (for 127.0.0.1 at 2010-01-07 14:16:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/jobs
+Rendering jobs/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/jobs/1/edit]
+
+
+Processing JobsController#update (for 127.0.0.1 at 2010-01-07 14:17:03) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "id"=>"1", "job"=>{"qty"=>"1", "importo"=>"200", "invoice_id"=>"1", "descrizione"=>"Manodopera", "tipo_iva_id"=>"1"}}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+  [4;35;1mJob Update (0.0ms)[0m   [0mUPDATE "jobs" SET "updated_at" = '2010-01-07 13:17:03', "importo" = 200.0, "qty" = 1 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/jobs/1
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/jobs/1]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2010-01-07 14:17:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/jobs
+Rendering jobs/show
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/jobs/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-07 14:17:06) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 14:17:25) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-01-07 14:18:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "job"=>{"qty"=>"2", "importo"=>"300", "invoice_id"=>"1", "descrizione"=>"Taglio Siepi", "tipo_iva_id"=>"1"}}
+  [4;36;1mJob Create (0.0ms)[0m   [0;1mINSERT INTO "jobs" ("qty", "importo", "created_at", "updated_at", "descrizione", "invoice_id", "tipo_iva_id") VALUES(2, 300.0, '2010-01-07 13:18:04', '2010-01-07 13:18:04', 'Taglio Siepi', 1, 1)[0m
+Redirected to http://localhost:3000/jobs/2
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2010-01-07 14:18:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 2) [0m
+Rendering template within layouts/jobs
+Rendering jobs/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/jobs/2]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-07 14:18:07) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 14:29:25) [GET]
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 156ms (View: 94, DB: 0) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 14:29:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+Completed in 750ms (View: 719, DB: 0) | 200 OK [http://localhost/invoices/1]
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" LIMIT 1[0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 14:32:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 453ms (View: 390, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 14:32:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 14:33:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (16.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 125ms (View: 47, DB: 16) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 14:59:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 297ms (View: 250, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:01:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (16.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 125ms (View: 47, DB: 16) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:01:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:01:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:05:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (15.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 266ms (View: 204, DB: 15) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:07:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 125ms (View: 93, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:08:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 281ms (View: 234, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:08:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:08:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:09:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 390ms (View: 359, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:09:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:09:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:10:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 360ms (View: 313, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:10:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:10:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:11:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 328ms (View: 281, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:12:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (16.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:17:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:21:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 266ms (View: 250, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:22:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+
+ActionView::TemplateError (undefined local variable or method `job' for #<ActionView::Base:0x48991f4>) on line #26 of app/views/invoices/show.html.erb:
+23:     <td>Iva%</td>
+24:     <td>Imponibile</td>
+25: 	<td>Importo</td>
+26:     <!--td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->
+27:   </tr>
+28: <% @invoice.jobs.each do |job| %>
+29:   <tr>
+
+    app/views/invoices/show.html.erb:26
+    app/controllers/invoices_controller.rb:18:in `show'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (484.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:22:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 219ms (View: 188, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:23:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 297ms (View: 250, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 15:24:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+Completed in 234ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1/edit]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:29:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (15.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Completed in 78ms (View: 47, DB: 15) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:30:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Completed in 125ms (View: 93, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:30:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (15.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Completed in 234ms (View: 47, DB: 15) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:50:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+ERROR: compiling _run_erb_app47views47invoices47show46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:50: syntax error, unexpected '<'
+; @output_buffer.concat(( h @tot_imponibile ></td>
+                                              ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:51: unknown regexp options - td
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:51: syntax error, unexpected '<'
+<td colspan=3>&nbsp;</td><td><%= h @totale ></td>
+                          ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:57: syntax error, unexpected '<'
+<%=h @invoice.descrizione ).to_...
+ ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+Function body:           def _run_erb_app47views47invoices47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<table class=\"invoice\">\n<tr>\n<td colspan=\"3\" rowspan=\"4\">\n<p>Fontana Roberto</p>\n<p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>\nC.F. \tFNTRRT72P11C957W <br />\nP.IVA 04167380262\t<br />\nN. REA CCIAA TV 328530\n</td>\n<td colspan=\"2\" rowspan=\"1\">\n<p>Spett.le ditta</p>\n</td>\n\n</tr>\n<tr>\n\n<td colspan=\"2\" rowspan=\"3\">\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.customer.ragione_sociale ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr></tr>\n<tr></tr>\n<tr></tr>\n<tr>\n<td colspan=\"3\">Fattura num. "
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.codice ).to_s); @output_buffer.concat "\n</td>\n<td colspan=\"2\">del: "
+
+; @output_buffer.concat((h (@invoice.data_fattura || @invoice.created_at).strftime("%m/%d/%Y") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n\t<td>Quantit\340</td>\n    <td>Descrizione</td>\n    <td>Iva%</td>\n    <td>Imponibile</td>\n\t<td>Importo</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+
+
+
+
+
+
+
+
+;  @invoice.jobs.each do |job| ; @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat((h job.qty ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.descrizione ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.tipo_iva.aliquota ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.importo ).to_s); @output_buffer.concat "</td>\n\t<td>"
+; @output_buffer.concat((h job.importo + (job.importo * job.tipo_iva.aliquota / 100) ).to_s); @output_buffer.concat "</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+;  end ; @output_buffer.concat "\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Imponibile:</td><td>"
+
+
+; @output_buffer.concat(( h @tot_imponibile ></td>
+<td colspan=3>&nbsp;</td><td><%= h @totale ></td>
+<td>Totale:</td><td>Totale:</td>
+</tr>
+<tr>
+<td >Annotazioni:</td></tr>
+<td colspan="5">
+<%=h @invoice.descrizione ).to_s); @output_buffer.concat "\n</td>\n</table>\n\n\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'Modifica', edit_invoice_path(@invoice) ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Torna ad Elenco Fatture', invoices_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:66:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/invoices_controller.rb:19:in `show'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:50: syntax error, unexpected '<'
+; @output_buffer.concat(( h @tot_imponibile ></td>
+                                              ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:51: unknown regexp options - td
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:51: syntax error, unexpected '<'
+<td colspan=3>&nbsp;</td><td><%= h @totale ></td>
+                          ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:57: syntax error, unexpected '<'
+<%=h @invoice.descrizione ).to_...
+ ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/show.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')') on line #50 of app/views/invoices/show.html.erb:
+47: <% end %>
+48: <tr>
+49: <td colspan=3>&nbsp;</td>
+50: <td>Imponibile:</td><td><%= h @tot_imponibile ></td>
+51: <td colspan=3>&nbsp;</td><td><%= h @totale ></td>
+52: <td>Totale:</td><td>Totale:</td>
+53: </tr>
+
+    app/views/invoices/show.html.erb:66:in `compile!'
+    app/controllers/invoices_controller.rb:19:in `show'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (454.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:50:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:51:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:51:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Completed in 218ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:55:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:56:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-07 15:56:43) [GET]
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 250ms (View: 234, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#edit (for 127.0.0.1 at 2010-01-07 15:56:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/edit
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/customers/1/edit]
+
+
+Processing CustomersController#update (for 127.0.0.1 at 2010-01-07 15:57:02) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "id"=>"1", "customer"=>{"comune"=>"prova", "cognome"=>"", "nome"=>"", "p_iva"=>"0245642181315", "cod_fisc"=>"", "cap"=>"00000", "indirizzo"=>"Via prova 1", "ragione_sociale"=>"Prova Spa"}}
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Update (0.0ms)[0m   [0mUPDATE "customers" SET "p_iva" = '0245642181315', "updated_at" = '2010-01-07 14:57:02', "indirizzo" = 'Via prova 1', "cod_fisc" = '', "cap" = '00000', "cognome" = '', "comune" = 'prova', "nome" = '' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/customers/1
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/customers/1]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2010-01-07 15:57:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/customers/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 15:59:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 141ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:00:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:01:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 16:01:09) [GET]
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:01:44) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+Completed in 219ms (View: 188, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:02:55) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:03:10) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+
+ActionView::TemplateError (undefined method `merge' for "aaaa":String) on line #8 of app/views/invoices/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :codice, "Numero Fattura" %><br />
+8:     <%= f.text_field :codice , "aaaa" %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :data_fattura %><br />
+
+    app/views/invoices/new.html.erb:8
+    app/views/invoices/new.html.erb:3
+    app/controllers/invoices_controller.rb:33:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:03:28) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:06:31) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:06:44) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;36;1mInvoice Load (16.0ms)[0m   [0;1mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+Completed in 62ms (View: 30, DB: 16) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:07:01) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:07:59) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:08:13) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:16:03) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+ERROR: compiling _run_erb_app47views47invoices47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/new.html.erb:17: syntax error, unexpected ';', expecting ')'
+...ione_sociale, c.id ] }).to_s); @output_buffer.concat "\n  </...
+                              ^
+Function body:           def _run_erb_app47views47invoices47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Crea una nuova fattura</h1>\n\n"
+
+;  form_for(@invoice) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :codice, "Numero Fattura" ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :codice, :value => DateTime.now.strftime("%Y-%m-") + (Invoice.last.id + 1).to_s ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data_fattura ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data_fattura ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :customer_id, Cliente ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :customer_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("invoice", "id", Customer.all.collect {|c| [ c.ragione_sociale, c.id ] }).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione, "Annotazioni Varie" ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Crea Fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', invoices_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/invoices/new.html.erb:31:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/invoices_controller.rb:33:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/new.html.erb:17: syntax error, unexpected ';', expecting ')'
+...ione_sociale, c.id ] }).to_s); @output_buffer.concat "\n  </...
+                              ^) on line #17 of app/views/invoices/new.html.erb:
+14:   <p>
+15:     <%= f.label :customer_id, Cliente %><br />
+16:     <%= f.text_field :customer_id %>
+17: 	<%= select("invoice", "id", Customer.all.collect {|c| [ c.ragione_sociale, c.id ] }%>
+18:   </p>
+19:   <p>
+20:     <%= f.label :descrizione, "Annotazioni Varie" %><br />
+
+    app/views/invoices/new.html.erb:31:in `compile!'
+    app/controllers/invoices_controller.rb:33:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:16:21) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+ERROR: compiling _run_erb_app47views47invoices47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/new.html.erb:17: syntax error, unexpected ';', expecting ')'
+...ione_sociale, c.id ] }).to_s); @output_buffer.concat "\n  </...
+                              ^
+Function body:           def _run_erb_app47views47invoices47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Crea una nuova fattura</h1>\n\n"
+
+;  form_for(@invoice) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :codice, "Numero Fattura" ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :codice, :value => (DateTime.now.strftime("%Y-%m-") + (Invoice.last.id + 1).to_s) ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data_fattura ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data_fattura ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :customer_id, Cliente ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :customer_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("invoice", "id", Customer.all.collect {|c| [ c.ragione_sociale, c.id ] }).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione, "Annotazioni Varie" ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Crea Fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', invoices_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/invoices/new.html.erb:31:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/invoices_controller.rb:33:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/new.html.erb:17: syntax error, unexpected ';', expecting ')'
+...ione_sociale, c.id ] }).to_s); @output_buffer.concat "\n  </...
+                              ^) on line #17 of app/views/invoices/new.html.erb:
+14:   <p>
+15:     <%= f.label :customer_id, Cliente %><br />
+16:     <%= f.text_field :customer_id %>
+17: 	<%= select("invoice", "id", Customer.all.collect {|c| [ c.ragione_sociale, c.id ] }%>
+18:   </p>
+19:   <p>
+20:     <%= f.label :descrizione, "Annotazioni Varie" %><br />
+
+    app/views/invoices/new.html.erb:31:in `compile!'
+    app/controllers/invoices_controller.rb:33:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:16:52) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Cliente) on line #15 of app/views/invoices/new.html.erb:
+12:     <%= f.date_select :data_fattura %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :customer_id, Cliente %><br />
+16:     <%= f.text_field :customer_id %>
+17: 	<%= select("invoice", "id", Customer.all.collect {|c| [ c.ragione_sociale, c.id ] }) %>
+18:   </p>
+
+    app/views/invoices/new.html.erb:15
+    app/views/invoices/new.html.erb:3
+    app/controllers/invoices_controller.rb:33:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:17:08) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:17:44) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#create (for 127.0.0.1 at 2010-01-07 16:17:57) [POST]
+  Parameters: {"commit"=>"Crea Fattura", "invoice"=>{"data_fattura(3i)"=>"7", "descrizione"=>"seconda fattura", "customer_id"=>"1", "data_fattura(1i)"=>"2010", "data_fattura(2i)"=>"1", "codice"=>"2010-01-2"}, "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M="}
+  [4;35;1mInvoice Create (0.0ms)[0m   [0mINSERT INTO "invoices" ("data_fattura", "created_at", "updated_at", "descrizione", "customer_id", "codice") VALUES('2010-01-07', '2010-01-07 15:17:57', '2010-01-07 15:17:57', 'seconda fattura', 1, '2010-01-2')[0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:17:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:18:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+Completed in 219ms (View: 188, DB: 0) | 200 OK [http://localhost/invoices/2/edit]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 16:18:30) [GET]
+  [4;36;1mInvoice Load (15.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 78ms (View: 47, DB: 15) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:18:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:21:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/invoices/2/edit]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:21:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 187ms (View: 171, DB: 0) | 200 OK [http://localhost/invoices/2/edit]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-07 16:44:23) [GET]
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2010-01-07 16:44:24) [GET]
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/customers/new]
+
+
+Processing CustomersController#create (for 127.0.0.1 at 2010-01-07 16:45:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "customer"=>{"comune"=>"roma", "cognome"=>"Smith", "nome"=>"Tony ", "p_iva"=>"", "cod_fisc"=>"tnsmth43985438", "cap"=>"00100", "indirizzo"=>"Via prova 2", "ragione_sociale"=>""}}
+  [4;36;1mCustomer Create (0.0ms)[0m   [0;1mINSERT INTO "customers" ("comune", "created_at", "cognome", "nome", "updated_at", "p_iva", "cod_fisc", "ragione_sociale", "indirizzo", "cap") VALUES('roma', '2010-01-07 15:45:01', 'Smith', 'Tony ', '2010-01-07 15:45:01', '', 'tnsmth43985438', '', 'Via prova 2', '00100')[0m
+Redirected to http://localhost:3000/customers/2
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/customers]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2010-01-07 16:45:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/customers/2]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-07 16:45:04) [GET]
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 79ms (View: 47, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:47:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+  [4;36;1mJob Load (16.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 1) [0m
+  [4;35;1mTipoIva Load (16.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 187ms (View: 15, DB: 32) | 200 OK [http://localhost/invoices/1]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:47:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+ERROR: compiling _run_erb_app47views47invoices47edit46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:26: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:30: syntax error, unexpected kENSURE, expecting ')'
+C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:32: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47invoices47edit46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Editing invoice</h1>\n\n"
+
+;  form_for(@invoice) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n   <p>\n    "
+
+
+; @output_buffer.concat(( f.label :codice, "Numero Fattura" ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :codice ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data_fattura ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data_fattura ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :customer_id, "Cliente" ).to_s); @output_buffer.concat "<br />\n    <!--= f.text_field :customer_id %-->\n\t"
+
+; @output_buffer.concat(( select("invoice", "customer_id", Customer.all.collect {|c| [ (#{c.ragione_sociale} || "#{c.nome} #{c.cognome}") , c.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione, "Annotazioni Varie" ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiorna Fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Show', @invoice ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Back', invoices_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:32:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:26: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:30: syntax error, unexpected kENSURE, expecting ')'
+C:/Utente/dl/prj/Railshu/app/views/invoices/edit.html.erb:32: syntax error, unexpected kEND, expecting ')') on line #26 of app/views/invoices/edit.html.erb:
+23:   <p>
+24:     <%= f.submit 'Aggiorna Fattura' %>
+25:   </p>
+26: <% end %>
+27: 
+28: <%= link_to 'Show', @invoice %> |
+29: <%= link_to 'Back', invoices_path %>
+
+    app/views/invoices/edit.html.erb:32:in `compile!'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:48:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (16.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 344ms (View: 203, DB: 16) | 200 OK [http://localhost/invoices/1/edit]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:48:52) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (15.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 78ms (View: 47, DB: 15) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:50:39) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:50:53) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 188ms (View: 156, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:51:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices/1/edit]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:51:25) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 16:51:52) [GET]
+  [4;35;1mInvoice Load (15.0ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-07 16:51:55) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 359ms (View: 172, DB: 0) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#create (for 127.0.0.1 at 2010-01-07 16:52:14) [POST]
+  Parameters: {"commit"=>"Crea Fattura", "invoice"=>{"data_fattura(3i)"=>"5", "descrizione"=>"Fattura per tony smith", "customer_id"=>"2", "data_fattura(1i)"=>"2010", "data_fattura(2i)"=>"1", "codice"=>"2010-01-3"}, "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M="}
+  [4;36;1mInvoice Create (16.0ms)[0m   [0;1mINSERT INTO "invoices" ("data_fattura", "created_at", "updated_at", "descrizione", "customer_id", "codice") VALUES('2010-01-05', '2010-01-07 15:52:14', '2010-01-07 15:52:14', 'Fattura per tony smith', 2, '2010-01-3')[0m
+Redirected to http://localhost:3000/invoices/3
+Completed in 172ms (DB: 16) | 302 Found [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:52:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:52:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/3/edit]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-07 16:52:25) [GET]
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:52:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/3/edit]
+
+
+Processing InvoicesController#update (for 127.0.0.1 at 2010-01-07 16:52:44) [PUT]
+  Parameters: {"commit"=>"Aggiorna Fattura", "invoice"=>{"data_fattura(3i)"=>"5", "descrizione"=>"Fattura in euro per tony smith", "customer_id"=>"2", "data_fattura(1i)"=>"2010", "data_fattura(2i)"=>"1", "codice"=>"2010-01-3"}, "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "id"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;36;1mInvoice Update (0.0ms)[0m   [0;1mUPDATE "invoices" SET "updated_at" = '2010-01-07 15:52:44', "descrizione" = 'Fattura in euro per tony smith' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/invoices/3
+Completed in 157ms (DB: 0) | 302 Found [http://localhost/invoices/3]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:52:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-07 16:54:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/3/edit]
+
+
+Processing InvoicesController#update (for 127.0.0.1 at 2010-01-07 16:54:49) [PUT]
+  Parameters: {"commit"=>"Aggiorna Fattura", "invoice"=>{"data_fattura(3i)"=>"5", "descrizione"=>"Fattura in dollari per tony smith", "customer_id"=>"2", "data_fattura(1i)"=>"2010", "data_fattura(2i)"=>"1", "codice"=>"2010-01-3"}, "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;35;1mInvoice Update (0.0ms)[0m   [0mUPDATE "invoices" SET "updated_at" = '2010-01-07 15:54:49', "descrizione" = 'Fattura in dollari per tony smith' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/invoices/3
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/invoices/3]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 16:54:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/invoices/3]
