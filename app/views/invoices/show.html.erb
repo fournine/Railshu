@@ -65,6 +65,7 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 </td>
 </table>
 
-
+<%= link_to 'Aggiungi Voce', :controller=>:jobs, :action =>:new , :invoice=>@invoice%> |
+<br />
 <%= link_to 'Modifica', edit_invoice_path(@invoice) %> |
 <%= link_to 'Torna ad Elenco Fatture', invoices_path %>

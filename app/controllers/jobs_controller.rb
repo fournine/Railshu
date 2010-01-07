@@ -25,7 +25,8 @@ class JobsController < ApplicationController
   # GET /jobs/new.xml
   def new
     @job = Job.new
-
+	@invoice = Invoice.find(params[:invoice])
+	@job.invoice = @invoice
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @job }
@@ -44,8 +45,8 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        flash[:notice] = 'Job was successfully created.'
-        format.html { redirect_to(@job) }
+        flash[:notice] = 'La voce è stata aggiunta con successo alla fattura!'
+        format.html { redirect_to(@job.invoice) }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else
         format.html { render :action => "new" }

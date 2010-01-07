@@ -1848,3 +1848,2477 @@ Rendering template within layouts/invoices
 Rendering invoices/show
   [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
 Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 17:35:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 188ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing JobsController#new to #<invoice:0x47d1b40> (for 127.0.0.1 at 2010-01-07 17:36:02) [GET]
+Completed in 46ms (View: 15, DB: 0) | 406 Not Acceptable [http://localhost/jobs/new.%23%3Cinvoice:0x47d1b40%3E]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:36:10) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 141ms (View: 31, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:36:20) [GET]
+  Parameters: {"invoice"=>"1"}
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=1]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 17:37:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 110ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 17:37:58) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 343ms (View: 312, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-07 17:38:02) [GET]
+  Parameters: {"invoice"=>"3"}
+
+ActionController::RoutingError (No route matches "/job/new" with {:method=>:get}):
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-07 17:38:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:38:17) [GET]
+  Parameters: {"invoice"=>"3"}
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:40:19) [GET]
+  Parameters: {"invoice"=>"3"}
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Completed in 266ms (View: 250, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:40:36) [GET]
+  Parameters: {"invoice"=>"3"}
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:41:21) [GET]
+  Parameters: {"invoice"=>"3"}
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Completed in 125ms (View: 93, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:43:50) [GET]
+  Parameters: {"invoice"=>"3"}
+
+ActiveRecord::AssociationTypeMismatch (Invoice(#37675960) expected, got String(#21131810)):
+  app/controllers/jobs_controller.rb:29:in `new'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (547.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:44:35) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:47:09) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (16.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...r.concat(( f.label 'Imponibile €' ).to_s); @output_buffer.co...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: Invalid char `\200' in expression
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label 'Quantità' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "<br />\n    <!--= f.text_field :tipo_iva_id %-->\n\t"
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label 'Imponibile €' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...r.concat(( f.label 'Imponibile €' ).to_s); @output_buffer.co...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: Invalid char `\200' in expression
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected $end, expecting ')') on line #22 of app/views/jobs/new.html.erb:
+19:   </p>
+20:   
+21:   <p>
+22:     <%= f.label 'Imponibile €' %>
+23:     <%= f.text_field :importo %>
+24:   </p>
+25:   <p>
+
+    app/views/jobs/new.html.erb:30:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (594.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:47:32) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...r.concat(( f.label 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label 'Quantità' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "<br />\n    <!--= f.text_field :tipo_iva_id %-->\n\t"
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label 'Imponibile EUR' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...r.concat(( f.label 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected $end, expecting ')') on line #22 of app/views/jobs/new.html.erb:
+19:   </p>
+20:   
+21:   <p>
+22:     <%= f.label 'Imponibile EUR' %>
+23:     <%= f.text_field :importo %>
+24:   </p>
+25:   <p>
+
+    app/views/jobs/new.html.erb:30:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:48:33) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...r.concat(( f.label 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label 'Quantità' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label 'Imponibile EUR' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...r.concat(( f.label 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected $end, expecting ')') on line #21 of app/views/jobs/new.html.erb:
+18:   </p>
+19:   
+20:   <p>
+21:     <%= f.label 'Imponibile EUR' %>
+22:     <%= f.text_field :importo %>
+23:   </p>
+24:   <p>
+
+    app/views/jobs/new.html.erb:29:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (640.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:49:28) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label 'Quantità' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :importo ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:29: syntax error, unexpected $end, expecting ')') on line #25 of app/views/jobs/new.html.erb:
+22:     <%= f.text_field :importo %>
+23:   </p>
+24:   <p>
+25:     <%= f.submit 'Aggiungi Voce alla fattura' %>
+26:   </p>
+27: <% end %>
+28: 
+
+    app/views/jobs/new.html.erb:29:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:50:03) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...r.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n"
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+                                 ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label "Quantità" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :importo ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...r.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n"
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+                                 ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $end, expecting ')') on line #12 of app/views/jobs/new.html.erb:
+9:     <%= f.text_area :descrizione %>
+10:   </p>
+11:   <p>
+12:     <%= f.label "Quantità" %>
+13:     <%= f.text_field :qty %>
+14:   </p>
+15:   <p>
+
+    app/views/jobs/new.html.erb:27:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:50:19) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (15.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 187ms (View: 31, DB: 15) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:51:20) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+...buffer.concat(( f.label :qty "Quantità" ).to_s); @output_buf...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...r.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...( f.label :importo "Imponibile €" ).to_s); @output_buffer.co...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: Invalid char `\200' in expression
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n"
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+                                 ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione , :size=>'5x20' ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :qty "Quantità" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :importo "Imponibile €" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+...buffer.concat(( f.label :qty "Quantità" ).to_s); @output_buf...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...r.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+...( f.label :importo "Imponibile €" ).to_s); @output_buffer.co...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: Invalid char `\200' in expression
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n"
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+                                 ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $end, expecting ')') on line #12 of app/views/jobs/new.html.erb:
+9:     <%= f.text_area :descrizione %>
+10:   </p>
+11:   <p>
+12:     <%= f.label :qty "Quantità" %>
+13:     <%= f.text_field :qty %>
+14:   </p>
+15:   <p>
+
+    app/views/jobs/new.html.erb:27:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (282.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:51:30) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...r.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+... f.label :importo, "Imponibile €" ).to_s); @output_buffer.co...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: Invalid char `\200' in expression
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n"
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+                                 ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descrizione , :size=>'5x20' ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descrizione ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :qty, "Quantità" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </p>\n  \n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :importo, "Imponibile €" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:12: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:17: syntax error, unexpected $undefined
+...r.concat "\n  </p>\n  \n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected tCONSTANT, expecting ')'
+... f.label :importo, "Imponibile €" ).to_s); @output_buffer.co...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: Invalid char `\200' in expression
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:22: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: unknown regexp option - p
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:25: syntax error, unexpected $undefined
+...utput_buffer.concat "\n  </p>\n"
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+                                 ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:27: syntax error, unexpected $end, expecting ')') on line #12 of app/views/jobs/new.html.erb:
+9:     <%= f.text_area :descrizione %>
+10:   </p>
+11:   <p>
+12:     <%= f.label :qty, "Quantità" %>
+13:     <%= f.text_field :qty %>
+14:   </p>
+15:   <p>
+
+    app/views/jobs/new.html.erb:27:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (453.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:51:47) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 125ms (View: 62, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:52:12) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:53:10) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 79ms (View: 47, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:53:24) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:53:32) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:53:56) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (15.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 79ms (View: 32, DB: 15) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:57:17) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (15.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n<table>\n  \n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :descrizione  ).to_s); @output_buffer.concat "\n  </td>\n  <td colspan=\"5\">\n    "
+
+
+; @output_buffer.concat(( f.text_area :descrizione , :size => "80x3" ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :qty, 'Quantità' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n </td>\n <td>\n\t"
+
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.label :importo, "Imponibile EUR" ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n</table>\n  <p>\n    "
+
+
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')') on line #38 of app/views/jobs/new.html.erb:
+35:   </tr>
+36: </table>
+37:   <p>
+38:     <%= f.submit 'Aggiungi Voce alla fattura' %>
+39:   </p>
+40: <% end %>
+41: 
+
+    app/views/jobs/new.html.erb:42:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:57:54) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+... f.label :importo, 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n<table>\n  \n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :descrizione  ).to_s); @output_buffer.concat "\n  </td>\n  <td colspan=\"5\">\n    "
+
+
+; @output_buffer.concat(( f.text_area :descrizione , :size => "80x3" ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :qty, 'Quantità' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n </td>\n <td>\n\t"
+
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.label :importo, 'Imponibile EUR' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n</table>\n  <p>\n    "
+
+
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+... f.label :importo, 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')') on line #30 of app/views/jobs/new.html.erb:
+27: 	<%= select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) %>
+28:   </td>
+29:   <td>
+30:     <%= f.label :importo, 'Imponibile EUR' %>
+31:   </td>
+32:   <td>
+33:     <%= f.text_field :importo %>
+
+    app/views/jobs/new.html.erb:42:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:58:05) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n<table>\n  \n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :descrizione  ).to_s); @output_buffer.concat "\n  </td>\n  <td colspan=\"5\">\n    "
+
+
+; @output_buffer.concat(( f.text_area :descrizione , :size => "80x3" ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :qty, 'Quantità' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.label :iva_id ).to_s); @output_buffer.concat "\n </td>\n <td>\n\t"
+
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.label :importo ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n</table>\n  <p>\n    "
+
+
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')') on line #38 of app/views/jobs/new.html.erb:
+35:   </tr>
+36: </table>
+37:   <p>
+38:     <%= f.submit 'Aggiungi Voce alla fattura' %>
+39:   </p>
+40: <% end %>
+41: 
+
+    app/views/jobs/new.html.erb:42:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:58:56) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...buffer.concat(( label_tag 'IVA' ).to_s); @output_buffer.conc...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...concat(( label_tag 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n<table>\n  \n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :descrizione  ).to_s); @output_buffer.concat "\n  </td>\n  <td colspan=\"5\">\n    "
+
+
+; @output_buffer.concat(( f.text_area :descrizione , :size => "80x3" ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( label_tag 'Q.tà' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( label_tag 'IVA' ).to_s); @output_buffer.concat "\n </td>\n <td>\n\t"
+
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( label_tag 'Imponibile EUR' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n</table>\n  <p>\n    "
+
+
+
+
+; @output_buffer.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...buffer.concat(( label_tag 'IVA' ).to_s); @output_buffer.conc...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...concat(( label_tag 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...er.concat(( f.submit 'Aggiungi Voce alla fattura' ).to_s); @...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')') on line #24 of app/views/jobs/new.html.erb:
+21:     <%= f.text_field :qty %>
+22:   </td>
+23:   <td>
+24:     <%= label_tag 'IVA' %>
+25:  </td>
+26:  <td>
+27: 	<%= select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) %>
+
+    app/views/jobs/new.html.erb:42:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 17:59:11) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+ERROR: compiling _run_erb_app47views47jobs47new46html46erb RAISED compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...buffer.concat(( label_tag 'IVA' ).to_s); @output_buffer.conc...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...concat(( label_tag 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.concat(( f.submit 'Create' ).to_s); @output_buffer.conc...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47jobs47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Nuova voce</h1>\n<h2>Fattura "
+; @output_buffer.concat(( h @job.invoice.codice ).to_s); @output_buffer.concat "</h2>\n\n"
+
+;  form_for(@job) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n<table>\n  \n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :descrizione  ).to_s); @output_buffer.concat "\n  </td>\n  <td colspan=\"5\">\n    "
+
+
+; @output_buffer.concat(( f.text_area :descrizione , :size => "80x3" ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n  <tr>\n  <td>\n    "
+
+
+
+
+; @output_buffer.concat(( label_tag 'Q.tà' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :qty ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( label_tag 'IVA' ).to_s); @output_buffer.concat "\n </td>\n <td>\n\t"
+
+
+; @output_buffer.concat(( select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( label_tag 'Imponibile EUR' ).to_s); @output_buffer.concat "\n  </td>\n  <td>\n    "
+
+
+; @output_buffer.concat(( f.text_field :importo ).to_s); @output_buffer.concat "\n  </td>\n  </tr>\n</table>\n  <p>\n    "
+
+
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42:in `compile!'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Utente/dl/prj/Railshu/app/controllers/jobs_controller.rb:30:in `new'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+C:/utente/dl/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/utente/dl/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting ')'
+...buffer.concat(( label_tag 'IVA' ).to_s); @output_buffer.conc...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:30: syntax error, unexpected tCONSTANT, expecting ')'
+...concat(( label_tag 'Imponibile EUR' ).to_s); @output_buffer....
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:38: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.concat(( f.submit 'Create' ).to_s); @output_buffer.conc...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( link_to 'Back', jobs_path ).to_s); @output_...
+                              ^
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: unterminated string meets end of file
+C:/Utente/dl/prj/Railshu/app/views/jobs/new.html.erb:42: syntax error, unexpected $end, expecting ')') on line #24 of app/views/jobs/new.html.erb:
+21:     <%= f.text_field :qty %>
+22:   </td>
+23:   <td>
+24:     <%= label_tag 'IVA' %>
+25:  </td>
+26:  <td>
+27: 	<%= select("job", "tipo_iva_id", TipoIva.all.collect {|i| [ "#{i.aliquota}% - #{i.descrizione}" , i.id ] }) %>
+
+    app/views/jobs/new.html.erb:42:in `compile!'
+    app/controllers/jobs_controller.rb:30:in `new'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 18:00:10) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-07 18:00:30) [GET]
+  Parameters: {"invoice"=>"3"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Completed in 250ms (View: 219, DB: 0) | 200 OK [http://localhost/jobs/new?invoice=3]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-01-07 18:00:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"OyVdu7kA1NrNIIWKaNLtoy5wKj7kKO8bYfdt/5GXY1M=", "job"=>{"qty"=>"2", "importo"=>"500", "descrizione"=>"Taglio Alberi", "tipo_iva_id"=>"1"}}
+  [4;35;1mJob Create (0.0ms)[0m   [0mINSERT INTO "jobs" ("qty", "importo", "created_at", "updated_at", "descrizione", "invoice_id", "tipo_iva_id") VALUES(2, 500.0, '2010-01-07 17:00:49', '2010-01-07 17:00:49', 'Taglio Alberi', NULL, 1)[0m
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/jobs_controller.rb:49:in `create'
+  app/controllers/jobs_controller.rb:46:in `create'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-07 18:01:21) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/jobs]
