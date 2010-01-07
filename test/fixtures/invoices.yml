@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  codice: MyString
+  data_fattura: 2010-01-07
+  customer_id: 1
+  descrizione: MyText
+
+two:
+  codice: MyString
+  data_fattura: 2010-01-07
+  customer_id: 1
+  descrizione: MyText

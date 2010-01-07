@@ -1,0 +1,27 @@
+<h1>New invoice</h1>
+
+<% form_for(@invoice) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codice %><br />
+    <%= f.text_field :codice %>
+  </p>
+  <p>
+    <%= f.label :data_fattura %><br />
+    <%= f.date_select :data_fattura %>
+  </p>
+  <p>
+    <%= f.label :customer_id %><br />
+    <%= f.text_field :customer_id %>
+  </p>
+  <p>
+    <%= f.label :descrizione %><br />
+    <%= f.text_area :descrizione %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', invoices_path %>

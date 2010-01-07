@@ -1,0 +1,23 @@
+<p>
+  <b>Codice:</b>
+  <%=h @invoice.codice %>
+</p>
+
+<p>
+  <b>Data fattura:</b>
+  <%=h @invoice.data_fattura %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%=h @invoice.customer_id %>
+</p>
+
+<p>
+  <b>Descrizione:</b>
+  <%=h @invoice.descrizione %>
+</p>
+
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

@@ -1,0 +1,28 @@
+<p>
+  <b>Descrizione:</b>
+  <%=h @job.descrizione %>
+</p>
+
+<p>
+  <b>Qty:</b>
+  <%=h @job.qty %>
+</p>
+
+<p>
+  <b>Iva:</b>
+  <%=h @job.iva_id %>
+</p>
+
+<p>
+  <b>Invoice:</b>
+  <%=h @job.invoice_id %>
+</p>
+
+<p>
+  <b>Importo:</b>
+  <%=h @job.importo %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

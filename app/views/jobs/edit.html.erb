@@ -1,0 +1,32 @@
+<h1>Editing job</h1>
+
+<% form_for(@job) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descrizione %><br />
+    <%= f.text_area :descrizione %>
+  </p>
+  <p>
+    <%= f.label :qty %><br />
+    <%= f.text_field :qty %>
+  </p>
+  <p>
+    <%= f.label :iva_id %><br />
+    <%= f.text_field :iva_id %>
+  </p>
+  <p>
+    <%= f.label :invoice_id %><br />
+    <%= f.text_field :invoice_id %>
+  </p>
+  <p>
+    <%= f.label :importo %><br />
+    <%= f.text_field :importo %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @job %> |
+<%= link_to 'Back', jobs_path %>

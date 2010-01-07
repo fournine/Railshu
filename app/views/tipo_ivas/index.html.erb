@@ -1,0 +1,22 @@
+<h1>Listing tipo_ivas</h1>
+
+<table>
+  <tr>
+    <th>Aliquota</th>
+    <th>Descrizione</th>
+  </tr>
+
+<% @tipo_ivas.each do |tipo_iva| %>
+  <tr>
+    <td><%=h tipo_iva.aliquota %></td>
+    <td><%=h tipo_iva.descrizione %></td>
+    <td><%= link_to 'Show', tipo_iva %></td>
+    <td><%= link_to 'Edit', edit_tipo_iva_path(tipo_iva) %></td>
+    <td><%= link_to 'Destroy', tipo_iva, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipo_iva', new_tipo_iva_path %>

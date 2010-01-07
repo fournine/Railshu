@@ -1,0 +1,43 @@
+<p>
+  <b>Ragione sociale:</b>
+  <%=h @customer.ragione_sociale %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%=h @customer.nome %>
+</p>
+
+<p>
+  <b>Cognome:</b>
+  <%=h @customer.cognome %>
+</p>
+
+<p>
+  <b>P iva:</b>
+  <%=h @customer.p_iva %>
+</p>
+
+<p>
+  <b>Cod fisc:</b>
+  <%=h @customer.cod_fisc %>
+</p>
+
+<p>
+  <b>Indirizzo:</b>
+  <%=h @customer.indirizzo %>
+</p>
+
+<p>
+  <b>Comune:</b>
+  <%=h @customer.comune %>
+</p>
+
+<p>
+  <b>Cap:</b>
+  <%=h @customer.cap %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

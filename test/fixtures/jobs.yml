@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  descrizione: MyText
+  qty: 1
+  iva_id: 1
+  importo: 1.5
+
+two:
+  descrizione: MyText
+  qty: 1
+  iva_id: 1
+  importo: 1.5

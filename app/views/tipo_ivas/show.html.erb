@@ -1,0 +1,13 @@
+<p>
+  <b>Aliquota:</b>
+  <%=h @tipo_iva.aliquota %>
+</p>
+
+<p>
+  <b>Descrizione:</b>
+  <%=h @tipo_iva.descrizione %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_iva_path(@tipo_iva) %> |
+<%= link_to 'Back', tipo_ivas_path %>
