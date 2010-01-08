@@ -62,7 +62,7 @@ table.invoice {
 }
 table.invoice th {
 	border-width: thin thin thin thin;
-	padding: 0px 0px 0px 0px;
+	padding: 1px;
 	border-style: dotted dotted dotted dotted;
 	border-color: lightsteelblue lightsteelblue lightsteelblue lightsteelblue;
 	background-color: white;
@@ -70,12 +70,34 @@ table.invoice th {
 }
 table.invoice td {
 	border-width: thin thin thin thin;
-	padding: 0px 0px 0px 0px;
+	padding: 1px;
 	border-style: dotted dotted dotted dotted;
 	border-color: lightsteelblue lightsteelblue lightsteelblue lightsteelblue;
 	background-color: white;
 	-moz-border-radius: 0px 0px 0px 0px;
 }
+table.invoice a {
+font-weight: bold;
+text-align: center;
+}
  td.qty {
-	width:5%;
+	width:2%;
+}
+
+.noborder {
+	border-width: 0px;
+	}
+
+.commandbutton {
+background-color: lightgray;
+padding: 3px;
+border: 2px dashed gray;
+text-decoration: none;
+color: black;
+}
+.appname {
+text-align:center;
+border: 2px dashed seagreen;
+background-color: honeydew;
+font-family: monospaced;
 }

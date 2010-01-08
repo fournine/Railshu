@@ -1,1 +1,1 @@
-ruby script\server start
+ruby script\server start --debugger

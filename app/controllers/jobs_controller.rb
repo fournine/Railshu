@@ -41,8 +41,9 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.xml
   def create
+  
     @job = Job.new(params[:job])
-
+    
     respond_to do |format|
       if @job.save
         flash[:notice] = 'La voce è stata aggiunta con successo alla fattura!'

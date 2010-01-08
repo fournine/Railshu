@@ -1,22 +1,22 @@
 <table class="invoice">
 <tr>
 <td colspan="3" rowspan="4">
-<p>Fontana Roberto</p>
+<h2>Fontana Roberto</h2>
 <p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>
 C.F. 	FNTRRT72P11C957W <br />
 P.IVA 04167380262	<br />
 N. REA CCIAA TV 328530
 </td>
 <td colspan="2" rowspan="1">
-<p>Spett.le ditta</p>
+<h4>Spett.le ditta</h4>
 </td>
 
 </tr>
 <tr>
 
 <td colspan="2" rowspan="3">
-<%=h @invoice.customer.ragione_sociale %><br />
-<%=h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" %><br />
+<h3><%=h @invoice.customer.ragione_sociale %><br />
+<%=h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" %></h3><br />
 <%=h @invoice.customer.indirizzo %><br />
 <%=h "#{@invoice.customer.cap} #{@invoice.customer.comune}" %><br />
 P. Iva <%=h @invoice.customer.p_iva %><br />
@@ -29,7 +29,7 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 <tr>
 <td colspan="3">Fattura num. <%=h @invoice.codice %>
 </td>
-<td colspan="2">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%m/%d/%Y") %>
+<td colspan="2">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") %>
 </td>
 </tr>
 <tr>
