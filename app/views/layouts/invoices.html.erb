@@ -13,8 +13,14 @@
 <h3>Generazione Fatture automatizzata - v0.5b</h3>
 </div>
 <p style="color: green"><%= flash[:notice] %></p>
-
+<div id="sidebar">
+<%= link_to 'Gestione Clienti', customers_path, :class=>"commandbutton" %>
+<br />
+<br />
+<%= link_to 'Gestione Aliquote Iva', tipo_ivas_path, :class=>"commandbutton" %>
+</div>
+<div id="content">
 <%= yield %>
-
+</div>
 </body>
 </html>
