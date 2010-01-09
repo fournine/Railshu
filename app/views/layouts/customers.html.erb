@@ -4,14 +4,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Customers: <%= controller.action_name %></title>
+  <title>Railshu: Fatture - v0.5b</title>
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
-
+<div class="appname">
+<h2>Railshu</h2>
+<h3>Gestione Clienti - v0.5b</h3>
+</div>
 <p style="color: green"><%= flash[:notice] %></p>
-
+<div id="sidebar">
+<%= link_to 'Gestione Fatture', invoices_path, :class=>"commandbutton" %>
+<br />
+<br />
+<%= link_to 'Gestione Aliquote Iva', tipo_ivas_path, :class=>"commandbutton" %>
+</div>
+<div id="content">
 <%= yield %>
-
+</div>
 </body>
 </html>

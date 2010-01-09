@@ -25,4 +25,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Annulla e torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' %>
+<%= link_to 'Back', invoices_path %>

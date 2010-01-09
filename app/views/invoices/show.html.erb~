@@ -68,7 +68,7 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 <table><tr><td class="commandbutton">
 <%= link_to 'Aggiungi Voce', :controller=>:jobs, :action =>:new , :invoice=>@invoice %> 
 </td><td>
-<%= link_to 'Modifica Intestatario o annotazioni', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
+<%= link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
 </td><td>
 <%= link_to 'Torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' %>
 </td></tr></table>

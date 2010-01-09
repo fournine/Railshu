@@ -14,8 +14,8 @@
     <td><%=h invoice.data_fattura.strftime("%d/%m/%Y") %></td>
     <td><%=h invoice.customer.intestazione %></td>
     <td><%=h invoice.descrizione %></td>
-    <td><%= link_to (image_tag "edit.png", {:alt => 'Modifica Fattura', :title => 'Modifica Fattura', :class=>'noborder'}), edit_invoice_path(invoice) %></td>
-    <td><%= link_to (image_tag "delete.gif", {:alt => 'Elimina Fattura', :title => 'Elimina Fattura', :class=>'noborder'}), invoice, :confirm => 'Sei sicuro di voler eliminare la fattura??', :method => :delete %></td>
+    <td><%= link_to (image_tag "edit.png", {:alt => 'Modifica Fattura', :class=>'noborder'}), edit_invoice_path(invoice) %></td>
+    <td><%= link_to (image_tag "delete.gif", {:alt => 'Elimina Fattura', :class=>'noborder'}), invoice, :confirm => 'Sei sicuro di voler eliminare la fattura??', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -5823,3 +5823,968 @@ Processing CustomersController#index (for 127.0.0.1 at 2010-01-08 17:17:23) [GET
 Rendering template within layouts/customers
 Rendering customers/index
 Completed in 203ms (View: 156, DB: 0) | 200 OK [http://localhost/customers]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 11:44:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.3ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;35;1mJob Load (0.2ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 81ms (View: 33, DB: 1) | 200 OK [http://localhost/invoices/3]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 11:44:57) [GET]
+  [4;35;1mInvoice Load (0.8ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;36;1mCustomer Load (0.3ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 117ms (View: 110, DB: 2) | 200 OK [http://localhost/invoices/]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 11:45:04) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mInvoice Load (0.3ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;36;1mTipoIva Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.3ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://localhost/invoices/4]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:40:53) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mInvoice Load (0.5ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;36;1mTipoIva Load (0.5ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+ERROR: compiling _run_erb_app47views47invoices47show46html46erb RAISED compile error
+/home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:69: syntax error, unexpected ','
+... =>:new , :invoice=>@invoice%, :class=>'commandbutton' ).to_...
+                              ^
+Function body:           def _run_erb_app47views47invoices47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<table class=\"invoice\">\n<tr>\n<td colspan=\"3\" rowspan=\"4\">\n<h2>Fontana Roberto</h2>\n<p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>\nC.F. \tFNTRRT72P11C957W <br />\nP.IVA 04167380262\t<br />\nN. REA CCIAA TV 328530\n</td>\n<td colspan=\"2\" rowspan=\"1\">\n<h4>Spett.le ditta</h4>\n</td>\n\n</tr>\n<tr>\n\n<td colspan=\"2\" rowspan=\"3\">\n<h3>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.customer.ragione_sociale ).to_s); @output_buffer.concat "<br />\n"
+; @output_buffer.concat((h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" ).to_s); @output_buffer.concat "</h3><br />\n"
+; @output_buffer.concat((h @invoice.customer.indirizzo ).to_s); @output_buffer.concat "<br />\n"
+; @output_buffer.concat((h "#{@invoice.customer.cap} #{@invoice.customer.comune}" ).to_s); @output_buffer.concat "<br />\nP. Iva "
+; @output_buffer.concat((h @invoice.customer.p_iva ).to_s); @output_buffer.concat "<br />\nC. F. "
+; @output_buffer.concat((h @invoice.customer.cod_fisc ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr></tr>\n<tr></tr>\n<tr></tr>\n<tr>\n<td colspan=\"3\">Fattura num. "
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.codice ).to_s); @output_buffer.concat "\n</td>\n<td colspan=\"2\">del: "
+
+; @output_buffer.concat((h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n\t<td>Quantit\340</td>\n    <td>Descrizione</td>\n    <td>Iva%</td>\n    <td>Imponibile</td>\n\t<td>Importo</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+
+
+
+
+
+
+
+
+;  @invoice.jobs.each do |job| ; @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat((h job.qty ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.descrizione ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.tipo_iva.aliquota ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.importo ).to_s); @output_buffer.concat "</td>\n\t<td>"
+; @output_buffer.concat((h job.importo + (job.importo * job.tipo_iva.aliquota / 100) ).to_s); @output_buffer.concat "</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+;  end ; @output_buffer.concat "\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Imponibile:</td><td>"
+
+
+; @output_buffer.concat(( h @tot_imponibile ).to_s); @output_buffer.concat "</td>\n</tr>\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Totale:</td><td>"
+
+
+
+; @output_buffer.concat(( h @totale ).to_s); @output_buffer.concat "</td>\n</tr>\n<tr>\n<td >Annotazioni:</td></tr>\n<td colspan=\"5\">\n"
+
+
+
+
+; @output_buffer.concat((h @invoice.descrizione ).to_s); @output_buffer.concat "\n</td>\n</table>\n\n<table><tr><td>\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'Aggiungi Voce', :controller=>:jobs, :action =>:new , :invoice=>@invoice%, :class=>'commandbutton' ).to_s); @output_buffer.concat " \n</td><td>\n"
+
+; @output_buffer.concat(( link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' ).to_s); @output_buffer.concat " \n</td><td>\n"
+
+; @output_buffer.concat(( link_to 'Torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' ).to_s); @output_buffer.concat "\n</td></tr></table>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:78:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/rey9999/apps/Railshu/app/controllers/invoices_controller.rb:22:in `show'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:69: syntax error, unexpected ','
+... =>:new , :invoice=>@invoice%, :class=>'commandbutton' ).to_...
+                              ^) on line #69 of app/views/invoices/show.html.erb:
+66: </table>
+67: 
+68: <table><tr><td>
+69: <%= link_to 'Aggiungi Voce', :controller=>:jobs, :action =>:new , :invoice=>@invoice%, :class=>'commandbutton' %> 
+70: </td><td>
+71: <%= link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
+72: </td><td>
+
+    app/views/invoices/show.html.erb:78:in `compile!'
+    app/controllers/invoices_controller.rb:22:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.8ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:41:09) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;35;1mTipoIva Load (0.3ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 44ms (View: 20, DB: 2) | 200 OK [http://localhost/invoices/4]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:41:53) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;35;1mTipoIva Load (0.3ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 117ms (View: 19, DB: 2) | 200 OK [http://localhost/invoices/4]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:42:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;35;1mTipoIva Load (0.3ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+ERROR: compiling _run_erb_app47views47invoices47show46html46erb RAISED compile error
+/home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:69: syntax error, unexpected ',', expecting ')'
+...ce', :class=>'commandbutton'), :controller=>:jobs, :action =...
+                              ^
+Function body:           def _run_erb_app47views47invoices47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<table class=\"invoice\">\n<tr>\n<td colspan=\"3\" rowspan=\"4\">\n<h2>Fontana Roberto</h2>\n<p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>\nC.F. \tFNTRRT72P11C957W <br />\nP.IVA 04167380262\t<br />\nN. REA CCIAA TV 328530\n</td>\n<td colspan=\"2\" rowspan=\"1\">\n<h4>Spett.le ditta</h4>\n</td>\n\n</tr>\n<tr>\n\n<td colspan=\"2\" rowspan=\"3\">\n<h3>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.customer.ragione_sociale ).to_s); @output_buffer.concat "<br />\n"
+; @output_buffer.concat((h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" ).to_s); @output_buffer.concat "</h3><br />\n"
+; @output_buffer.concat((h @invoice.customer.indirizzo ).to_s); @output_buffer.concat "<br />\n"
+; @output_buffer.concat((h "#{@invoice.customer.cap} #{@invoice.customer.comune}" ).to_s); @output_buffer.concat "<br />\nP. Iva "
+; @output_buffer.concat((h @invoice.customer.p_iva ).to_s); @output_buffer.concat "<br />\nC. F. "
+; @output_buffer.concat((h @invoice.customer.cod_fisc ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr></tr>\n<tr></tr>\n<tr></tr>\n<tr>\n<td colspan=\"3\">Fattura num. "
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.codice ).to_s); @output_buffer.concat "\n</td>\n<td colspan=\"2\">del: "
+
+; @output_buffer.concat((h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n\t<td>Quantit\340</td>\n    <td>Descrizione</td>\n    <td>Iva%</td>\n    <td>Imponibile</td>\n\t<td>Importo</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+
+
+
+
+
+
+
+
+;  @invoice.jobs.each do |job| ; @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat((h job.qty ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.descrizione ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.tipo_iva.aliquota ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.importo ).to_s); @output_buffer.concat "</td>\n\t<td>"
+; @output_buffer.concat((h job.importo + (job.importo * job.tipo_iva.aliquota / 100) ).to_s); @output_buffer.concat "</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+;  end ; @output_buffer.concat "\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Imponibile:</td><td>"
+
+
+; @output_buffer.concat(( h @tot_imponibile ).to_s); @output_buffer.concat "</td>\n</tr>\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Totale:</td><td>"
+
+
+
+; @output_buffer.concat(( h @totale ).to_s); @output_buffer.concat "</td>\n</tr>\n<tr>\n<td >Annotazioni:</td></tr>\n<td colspan=\"5\">\n"
+
+
+
+
+; @output_buffer.concat((h @invoice.descrizione ).to_s); @output_buffer.concat "\n</td>\n</table>\n<br />\n<table><tr><td>\n"
+
+
+
+
+; @output_buffer.concat(( link_to ('Aggiungi Voce', :class=>'commandbutton'), :controller=>:jobs, :action =>:new , :invoice=>@invoice ).to_s); @output_buffer.concat " \n</td><td>\n"
+
+; @output_buffer.concat(( link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' ).to_s); @output_buffer.concat " \n</td><td>\n"
+
+; @output_buffer.concat(( link_to 'Torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' ).to_s); @output_buffer.concat "\n</td></tr></table>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:78:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/rey9999/apps/Railshu/app/controllers/invoices_controller.rb:22:in `show'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:69: syntax error, unexpected ',', expecting ')'
+...ce', :class=>'commandbutton'), :controller=>:jobs, :action =...
+                              ^) on line #69 of app/views/invoices/show.html.erb:
+66: </table>
+67: <br />
+68: <table><tr><td>
+69: <%= link_to ('Aggiungi Voce', :class=>'commandbutton'), :controller=>:jobs, :action =>:new , :invoice=>@invoice %> 
+70: </td><td>
+71: <%= link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
+72: </td><td>
+
+    app/views/invoices/show.html.erb:78:in `compile!'
+    app/controllers/invoices_controller.rb:22:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:43:14) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;36;1mTipoIva Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+ERROR: compiling _run_erb_app47views47invoices47show46html46erb RAISED compile error
+/home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:69: syntax error, unexpected tASSOC, expecting ')'
+...Aggiungi Voce', (:controller=>:jobs, :action =>:new , :invoi...
+                              ^
+Function body:           def _run_erb_app47views47invoices47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<table class=\"invoice\">\n<tr>\n<td colspan=\"3\" rowspan=\"4\">\n<h2>Fontana Roberto</h2>\n<p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>\nC.F. \tFNTRRT72P11C957W <br />\nP.IVA 04167380262\t<br />\nN. REA CCIAA TV 328530\n</td>\n<td colspan=\"2\" rowspan=\"1\">\n<h4>Spett.le ditta</h4>\n</td>\n\n</tr>\n<tr>\n\n<td colspan=\"2\" rowspan=\"3\">\n<h3>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.customer.ragione_sociale ).to_s); @output_buffer.concat "<br />\n"
+; @output_buffer.concat((h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" ).to_s); @output_buffer.concat "</h3><br />\n"
+; @output_buffer.concat((h @invoice.customer.indirizzo ).to_s); @output_buffer.concat "<br />\n"
+; @output_buffer.concat((h "#{@invoice.customer.cap} #{@invoice.customer.comune}" ).to_s); @output_buffer.concat "<br />\nP. Iva "
+; @output_buffer.concat((h @invoice.customer.p_iva ).to_s); @output_buffer.concat "<br />\nC. F. "
+; @output_buffer.concat((h @invoice.customer.cod_fisc ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr></tr>\n<tr></tr>\n<tr></tr>\n<tr>\n<td colspan=\"3\">Fattura num. "
+
+
+
+
+
+
+; @output_buffer.concat((h @invoice.codice ).to_s); @output_buffer.concat "\n</td>\n<td colspan=\"2\">del: "
+
+; @output_buffer.concat((h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n\t<td>Quantit\340</td>\n    <td>Descrizione</td>\n    <td>Iva%</td>\n    <td>Imponibile</td>\n\t<td>Importo</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+
+
+
+
+
+
+
+
+;  @invoice.jobs.each do |job| ; @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat((h job.qty ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.descrizione ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.tipo_iva.aliquota ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h job.importo ).to_s); @output_buffer.concat "</td>\n\t<td>"
+; @output_buffer.concat((h job.importo + (job.importo * job.tipo_iva.aliquota / 100) ).to_s); @output_buffer.concat "</td>\n    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->\n  </tr>\n"
+
+
+;  end ; @output_buffer.concat "\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Imponibile:</td><td>"
+
+
+; @output_buffer.concat(( h @tot_imponibile ).to_s); @output_buffer.concat "</td>\n</tr>\n<tr>\n<td colspan=3>&nbsp;</td>\n<td>Totale:</td><td>"
+
+
+
+; @output_buffer.concat(( h @totale ).to_s); @output_buffer.concat "</td>\n</tr>\n<tr>\n<td >Annotazioni:</td></tr>\n<td colspan=\"5\">\n"
+
+
+
+
+; @output_buffer.concat((h @invoice.descrizione ).to_s); @output_buffer.concat "\n</td>\n</table>\n<br />\n<table><tr><td>\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'Aggiungi Voce', (:controller=>:jobs, :action =>:new , :invoice=>@invoice) ).to_s); @output_buffer.concat " \n</td><td>\n"
+
+; @output_buffer.concat(( link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' ).to_s); @output_buffer.concat " \n</td><td>\n"
+
+; @output_buffer.concat(( link_to 'Torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' ).to_s); @output_buffer.concat "\n</td></tr></table>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:78:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/rey9999/apps/Railshu/app/controllers/invoices_controller.rb:22:in `show'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/rey9999/apps/Railshu/app/views/invoices/show.html.erb:69: syntax error, unexpected tASSOC, expecting ')'
+...Aggiungi Voce', (:controller=>:jobs, :action =>:new , :invoi...
+                              ^) on line #69 of app/views/invoices/show.html.erb:
+66: </table>
+67: <br />
+68: <table><tr><td>
+69: <%= link_to 'Aggiungi Voce', (:controller=>:jobs, :action =>:new , :invoice=>@invoice) %> 
+70: </td><td>
+71: <%= link_to 'Modifica', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
+72: </td><td>
+
+    app/views/invoices/show.html.erb:78:in `compile!'
+    app/controllers/invoices_controller.rb:22:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:43:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;35;1mTipoIva Load (0.4ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 147ms (View: 23, DB: 2) | 200 OK [http://localhost/invoices/4]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 12:44:04) [GET]
+  [4;35;1mInvoice Load (0.9ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 64ms (View: 56, DB: 2) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-09 12:44:10) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;35;1mCustomer Load (1.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 250ms (View: 240, DB: 1) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 12:44:12) [GET]
+  [4;36;1mInvoice Load (0.9ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 53ms (View: 45, DB: 2) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:44:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;35;1mTipoIva Load (0.3ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 44ms (View: 16, DB: 1) | 200 OK [http://localhost/invoices/4]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:44:43) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mInvoice Load (0.5ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 4) [0m
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 4) [0m
+  [4;35;1mTipoIva Load (0.3ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 46ms (View: 19, DB: 2) | 200 OK [http://localhost/invoices/4]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:45:02) [GET]
+  [4;35;1mCustomer Load (0.8ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 42ms (View: 34, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:46:43) [GET]
+  [4;36;1mCustomer Load (0.8ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:53:47) [GET]
+  [4;35;1mCustomer Load (0.9ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 50ms (View: 37, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:55:45) [GET]
+  [4;36;1mCustomer Load (0.8ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 32ms (View: 24, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 12:56:11) [GET]
+  [4;35;1mInvoice Load (1.0ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;36;1mCustomer Load (47.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 225ms (View: 91, DB: 48) | 200 OK [http://localhost/invoices]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:56:23) [GET]
+  [4;36;1mCustomer Load (0.8ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 35ms (View: 26, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2010-01-09 12:56:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/customers/1]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:56:33) [GET]
+  [4;36;1mCustomer Load (0.8ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 35ms (View: 27, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:56:57) [GET]
+  [4;35;1mCustomer Load (1.6ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 45ms (View: 32, DB: 2) | 200 OK [http://localhost/customers]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 12:57:18) [GET]
+  [4;36;1mInvoice Load (1.0ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 61ms (View: 53, DB: 2) | 200 OK [http://localhost/invoices]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 12:57:23) [GET]
+  [4;35;1mCustomer Load (1.1ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 28ms (View: 19, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-09 12:57:23) [GET]
+  [4;36;1mTipoIva Load (0.6ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/index
+Completed in 116ms (View: 110, DB: 1) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-09 12:57:34) [GET]
+  [4;35;1mTipoIva Load (0.6ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 12:57:47) [GET]
+  [4;36;1mInvoice Load (1.2ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 58ms (View: 49, DB: 2) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-09 12:57:48) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;35;1mInvoice Load (0.4ms)[0m   [0mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;36;1mCustomer Load (0.6ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Completed in 42ms (View: 33, DB: 1) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoicesController#create (for 127.0.0.1 at 2010-01-09 12:58:20) [POST]
+  Parameters: {"commit"=>"Crea Fattura", "invoice"=>{"data_fattura(3i)"=>"9", "descrizione"=>"Fattura di test finale", "customer_id"=>"1", "data_fattura(1i)"=>"2010", "data_fattura(2i)"=>"1", "codice"=>"2010-01-6"}, "authenticity_token"=>"nWMSwgaOUdPH4oKIeolHzQ66rsdHgDhUCm2E+JfdIuk="}
+  [4;35;1mInvoice Create (0.4ms)[0m   [0mINSERT INTO "invoices" ("data_fattura", "created_at", "updated_at", "descrizione", "customer_id", "codice") VALUES('2010-01-09', '2010-01-09 11:58:20', '2010-01-09 11:58:20', 'Fattura di test finale', 1, '2010-01-6')[0m
+Redirected to http://localhost:3000/invoices/6
+Completed in 37ms (DB: 0) | 302 Found [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 12:58:20) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mInvoice Load (1.4ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 6) [0m
+  [4;35;1mJob Load (0.2ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 6) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.4ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 30ms (View: 14, DB: 2) | 200 OK [http://localhost/invoices/6]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-09 12:58:36) [GET]
+  Parameters: {"invoice"=>"6"}
+  [4;35;1mInvoice Load (0.4ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 6) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;36;1mTipoIva Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Completed in 73ms (View: 31, DB: 1) | 200 OK [http://localhost/jobs/new?invoice=6]
+
+
+Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-09 13:00:40) [GET]
+  [4;35;1mTipoIva Load (0.6ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 13:00:43) [GET]
+  [4;36;1mCustomer Load (0.8ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2010-01-09 13:00:46) [GET]
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/customers/new]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 13:00:52) [GET]
+  [4;35;1mInvoice Load (1.0ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;36;1mCustomer Load (0.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 59ms (View: 51, DB: 2) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-09 13:00:53) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 5) [0m
+  [4;36;1mJob Load (0.2ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 5) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.4ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/invoices/5]
+
+
+Processing InvoicesController#edit (for 127.0.0.1 at 2010-01-09 13:00:55) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mInvoice Load (0.3ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 5) [0m
+Rendering template within layouts/invoices
+Rendering invoices/edit
+  [4;35;1mCustomer Load (0.6ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 38ms (View: 29, DB: 1) | 200 OK [http://localhost/invoices/5/edit]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-01-09 13:01:35) [GET]
+  Parameters: {"invoice"=>"5"}
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 5) [0m
+Rendering template within layouts/jobs
+Rendering jobs/new
+  [4;35;1mTipoIva Load (0.4ms)[0m   [0mSELECT * FROM "tipo_ivas" [0m
+Completed in 106ms (View: 80, DB: 1) | 200 OK [http://localhost/jobs/new?invoice=5]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-01-09 13:02:41) [GET]
+  [4;36;1mJob Load (2.9ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 94ms (View: 75, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2010-01-09 13:02:45) [GET]
+  [4;35;1mCustomer Load (0.8ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/customers]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-09 13:02:47) [GET]
+  [4;36;1mInvoice Load (1.1ms)[0m   [0;1mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;35;1mCustomer Load (0.5ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCustomer Load (2.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 83ms (View: 72, DB: 4) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2010-01-09 13:02:48) [GET]
+Rendering template within layouts/invoices
+Rendering invoices/new
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM "invoices" ORDER BY invoices.id DESC LIMIT 1[0m
+  [4;35;1mCustomer Load (0.9ms)[0m   [0mSELECT * FROM "customers" [0m
+Completed in 105ms (View: 33, DB: 1) | 200 OK [http://localhost/invoices/new]

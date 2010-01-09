@@ -10,7 +10,7 @@
 <body>
 <div class="appname">
 <h2>Railshu</h2>
-<h3>Gestione Aliquote Iva - v0.5b</h3>
+<h3>Gestione Clienti - v0.5b</h3>
 </div>
 <p style="color: green"><%= flash[:notice] %></p>
 <div id="sidebar">
