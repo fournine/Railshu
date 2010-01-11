@@ -3,18 +3,16 @@
 <% form_for(@tipo_iva) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :aliquota %><br />
-    <%= f.text_field :aliquota %>
-  </p>
-  <p>
-    <%= f.label :descrizione %><br />
-    <%= f.text_field :descrizione %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
+  <table class="insert">
+  <tr>
+    <th>Descrizione</th>
+	<td><%= f.text_field :descrizione %></td>
+    <th>Valore Aliquota</th>
+	<td><%= f.text_field :aliquota %></td>
+  </tr>
+ </table>
+    <%= f.submit 'Aggiorna Aliquota' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @tipo_iva %> |
-<%= link_to 'Back', tipo_ivas_path %>
+<%= link_to 'Torna a Gestione Aliquote', tipo_ivas_path, :class=>'commandbutton' %>

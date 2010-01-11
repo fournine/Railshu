@@ -1,19 +1,18 @@
-<h1>New tipo_iva</h1>
+<h1>Aggiungi Aliquota</h1>
 
 <% form_for(@tipo_iva) do |f| %>
   <%= f.error_messages %>
-
+<table class="insert">
+  <tr>
+    <th>Descrizione</th>
+	<td><%= f.text_field :descrizione %></td>
+    <th>Valore Aliquota</th>
+	<td><%= f.text_field :aliquota %></td>
+  </tr>
+ </table>
   <p>
-    <%= f.label :aliquota %><br />
-    <%= f.text_field :aliquota %>
-  </p>
-  <p>
-    <%= f.label :descrizione %><br />
-    <%= f.text_field :descrizione %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Aggiungi Aliquota' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', tipo_ivas_path %>
+<%= link_to 'Torna a Gestione Aliquote', tipo_ivas_path, :class=>'commandbutton' %>

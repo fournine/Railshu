@@ -12,10 +12,10 @@
   <tr>
     <td><%=link_to customer.intestazione, customer %></td>
     <td><%=h customer.indirizzo %></td>
-    <td><%=h customer.comune %></td>
+    <td><%=h (customer.cap + " - " + customer.comune) %></td>
     
     <td><%= link_to (image_tag "edit.png", {:alt => 'Modifica dati Cliente', :title => 'Modifica dati Cliente', :class=>'noborder'}), edit_customer_path(customer) %></td>
-    <td><%= link_to (image_tag "delete.gif", {:alt => 'Elimina Cliente', :title => 'Elimina Cliente', :class=>'noborder'}), customer, :confirm => 'Sei sicuro di voler eliminare Questo Cliente?', :method => :delete %></td>
+    <td><%= link_to (image_tag "delete.gif", {:alt => 'Elimina Cliente', :title => 'Elimina Cliente', :class=>'noborder'}), customer, :confirm => 'Sei sicuro di voler eliminare questo Cliente?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

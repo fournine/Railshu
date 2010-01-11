@@ -1,43 +1,38 @@
-<p>
-  <b>Ragione sociale:</b>
-  <%=h @customer.ragione_sociale %>
-</p>
 
 <p>
-  <b>Nome:</b>
-  <%=h @customer.nome %>
-</p>
-
-<p>
-  <b>Cognome:</b>
-  <%=h @customer.cognome %>
-</p>
-
-<p>
-  <b>P iva:</b>
+<table class = "insert">
+<tr>
+<td colspan="2">
+<h2>
+  <%=h @customer.intestazione %>
+</h2>
+</td>
+</tr>
+<tr>
+<th>
+  P. Iva:
+</th>
+<td>
   <%=h @customer.p_iva %>
-</p>
-
-<p>
-  <b>Cod fisc:</b>
+</td>
+</tr>
+<tr>
+<th>
+  Cod. Fisc.:
+</th>
+<td>
   <%=h @customer.cod_fisc %>
+</td>
+</tr>
+<tr>
+<th>
+  Indirizzo
+</th>
+<td>
+  <%=h "#{@customer.indirizzo}\n#{@customer.cap}\n#{@customer.comune}" %>
+</td>
+</tr>
 </p>
-
 <p>
-  <b>Indirizzo:</b>
-  <%=h @customer.indirizzo %>
-</p>
-
-<p>
-  <b>Comune:</b>
-  <%=h @customer.comune %>
-</p>
-
-<p>
-  <b>Cap:</b>
-  <%=h @customer.cap %>
-</p>
-
-
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to 'Modifica dati Cliente', edit_customer_path(@customer) , :class=>"commandbutton"%> 
+<%= link_to "Torna all'elenco Clienti", customers_path, :class=>"commandbutton" %></p>

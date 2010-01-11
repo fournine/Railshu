@@ -10,5 +10,10 @@ has_many :invoices
 		nome + " " + cognome
 		end
 	end
+	
+	def validate
+  errors.add(:ragione_sociale, ": Inserire la ragione sociale o il cognome!") if ragione_sociale.blank? && cognome.blank?
+  errors.add(:cognome, ": Inserire la ragione sociale o il cognome!") if ragione_sociale.blank? && cognome.blank?
+end 
 
 end

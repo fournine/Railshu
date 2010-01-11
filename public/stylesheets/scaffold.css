@@ -76,6 +76,34 @@ table.invoice td {
 	background-color: white;
 	-moz-border-radius: 0px 0px 0px 0px;
 }
+
+table.insert {
+    width: 80%;
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 2px;
+	border-style: outset outset outset outset;
+	border-color: gray gray gray gray;
+	border-collapse: separate;
+	background-color: white;
+}
+table.insert th {
+	border-width: thin thin thin thin;
+	padding: 1px;
+	border-style: dotted dotted dotted dotted;
+	border-color: lightsteelblue lightsteelblue lightsteelblue lightsteelblue;
+	background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+table.insert td {
+	border-width: thin thin thin thin;
+	padding: 1px;
+	border-style: dotted dotted dotted dotted;
+	border-color: lightsteelblue lightsteelblue lightsteelblue lightsteelblue;
+	background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+
+
 table.invoice a {
 font-weight: bold;
 text-align: center;

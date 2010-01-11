@@ -1,13 +1,15 @@
-<p>
-  <b>Aliquota:</b>
-  <%=h @tipo_iva.aliquota %>
-</p>
 
-<p>
-  <b>Descrizione:</b>
-  <%=h @tipo_iva.descrizione %>
-</p>
+<table class="insert">
+<tr>
+  <th>Aliquota:</th>
+  <td><%=h @tipo_iva.aliquota %> %</td>
+</tr>
 
-
-<%= link_to 'Edit', edit_tipo_iva_path(@tipo_iva) %> |
-<%= link_to 'Back', tipo_ivas_path %>
+<tr>
+  <th>Descrizione:</th>
+  <td><%=h @tipo_iva.descrizione %></td>
+</tr>
+</table>
+<br />
+<%= link_to 'Modifica tipo Aliquota', edit_tipo_iva_path(@tipo_iva), :class=>"commandbutton" %> 
+<%= link_to "Ritorna all'elenco", tipo_ivas_path  , :class=>"commandbutton" %>
