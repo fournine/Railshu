@@ -9428,3 +9428,15 @@ Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-11 15:09:30) [GET]
 Rendering template within layouts/tipo_ivas
 Rendering tipo_ivas/index
 Completed in 203ms (View: 188, DB: 0) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing TipoIvasController#new (for 127.0.0.1 at 2010-01-11 15:28:13) [GET]
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/new
+Completed in 266ms (View: 203, DB: 0) | 200 OK [http://localhost/tipo_ivas/new]
+
+
+Processing TipoIvasController#new (for 127.0.0.1 at 2010-01-11 15:28:58) [GET]
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/new
+Completed in 157ms (View: 141, DB: 0) | 200 OK [http://localhost/tipo_ivas/new]
