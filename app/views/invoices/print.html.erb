@@ -1,6 +1,37 @@
-<table class="invoice">
+<style type="text/css">
+table.printout {
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 3px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+	border-collapse: separate;
+	background-color: #FFFFFF;
+}
+table.printout th {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: hidden hidden hidden hidden;
+	border-color: blue blue blue blue;
+	background-color: #08FFFF;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+table.printout td {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: hidden hidden hidden hidden;
+	border-color: blue blue blue blue;
+	background-color: #FFFFF0;
+	-moz-border-radius: 0px 0px 0px 0px;
+	
+.titlebr {
+	border-width: 2px 2px 2px 2px;
+}
+</style>
+
+
+<table class="printout">
 <tr>
-<td colspan="3" rowspan="4">
+<td colspan="3" rowspan="4" class="titlebr">
 <h2>Fontana Roberto</h2>
 <p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>
 C.F. 	FNTRRT72P11C957W <br />
@@ -33,12 +64,12 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 </td>
 </tr>
 <tr>
-	<td>Quantità</td>
-    <td>Descrizione</td>
-    <td>Iva%</td>
-    <td>Imponibile</td>
-	<td>Importo</td>
-    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->
+	<th>Quantità</th>
+    <th>Descrizione</th>
+    <th>Iva%</th>
+    <th>Imponibile</th>
+	<th>Importo</th>
+    
   </tr>
 <% @invoice.jobs.each do |job| %>
   <tr>
@@ -47,15 +78,15 @@ C. F. <%=h @invoice.customer.cod_fisc %>
     <td><%=h job.tipo_iva.aliquota %></td>
     <td><%=h job.importo %></td>
 	<td><%=h job.importo + (job.importo * job.tipo_iva.aliquota / 100) %></td>
-    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->
+    
   </tr>
 <% end %>
 <tr>
-<td colspan="3">&nbsp;</td>
+<td colspan="3"></td>
 <td>Imponibile:</td><td><%= h @tot_imponibile %></td>
 </tr>
 <tr>
-<td colspan="3">&nbsp;</td>
+<td colspan="3"></td>
 <td>Totale:</td><td><%= h @totale %></td>
 </tr>
 <tr>
@@ -64,13 +95,3 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 <%=h @invoice.descrizione %>
 </td>
 </table>
-<br />
-<table><tr><td class="commandbutton">
-<%= link_to 'Aggiungi Voce', :controller=>:jobs, :action =>:new , :invoice=>@invoice %> 
-</td><td>
-<%= link_to 'Modifica Intestatario o annotazioni', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
-</td><td class="commandbutton">
-<%= link_to 'Stampa', :controller=>:invoices, :action=>"print", :id=>@invoice  %> 
-</td><td>
-<%= link_to 'Torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' %>
-</td></tr></table>

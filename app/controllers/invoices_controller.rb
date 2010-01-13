@@ -86,4 +86,27 @@ class InvoicesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def print
+  
+	  @invoice = Invoice.find(params[:id])
+	  @tot_imponibile = @invoice.jobs.map{|x| x.importo}.inject(0){|sum,item| sum + item}
+	@totale = @invoice.jobs.map{|x| (x.importo) + (x.importo * x.tipo_iva.aliquota / 100)}.inject(0){|sum,item| sum + item}
+	  
+	  
+	  fl = File.new("C:\\temp\\#{@invoice.codice}.xml", 'w')
+	  buffer = ''
+	  buffer = render_to_string :action => "print", :layout => false
+
+	  fl.puts buffer
+	  fl.close
+	  respond_to do |format|
+	   flash[:notice] = "Fattura salvata in C:\\temp\\#{@invoice.codice}.xml"
+      format.html { redirect_to(invoice_url(@invoice)) }
+      format.xml  { head :ok }
+    end
+  
+  end
+  
+  
 end
