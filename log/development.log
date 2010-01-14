@@ -12040,3 +12040,595 @@ Rendering template within layouts/invoices
 Rendering invoices/show
   [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
 Completed in 93ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:19:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;36;1mTipoIva Load (15.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 375ms (View: 78, DB: 15) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:20:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 172ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-14 17:20:48) [GET]
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/index
+Completed in 234ms (View: 109, DB: 0) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing TipoIvasController#edit (for 127.0.0.1 at 2010-01-14 17:20:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/edit
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/tipo_ivas/2/edit]
+
+
+Processing TipoIvasController#update (for 127.0.0.1 at 2010-01-14 17:21:10) [PUT]
+  Parameters: {"tipo_iva"=>{"descrizione"=>"Nuova aliquota", "aliquota"=>"34"}, "commit"=>"Aggiorna Aliquota", "authenticity_token"=>"PsaTTpL+BJ1QoSCqpWdF7bD2oumVaauBP5NRyufCUNg=", "id"=>"2"}
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+  [4;35;1mTipoIva Update (0.0ms)[0m   [0mUPDATE "tipo_ivas" SET "updated_at" = '2010-01-14 16:21:10', "descrizione" = 'Nuova aliquota' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/tipo_ivas/2
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/tipo_ivas/2]
+
+
+Processing TipoIvasController#show (for 127.0.0.1 at 2010-01-14 17:21:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/show
+Completed in 156ms (View: 62, DB: 0) | 200 OK [http://localhost/tipo_ivas/2]
+
+
+Processing TipoIvasController#edit (for 127.0.0.1 at 2010-01-14 17:21:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/edit
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/tipo_ivas/2/edit]
+
+
+Processing TipoIvasController#edit (for 127.0.0.1 at 2010-01-14 17:22:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/edit
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/tipo_ivas/2/edit]
+
+
+Processing TipoIvasController#edit (for 127.0.0.1 at 2010-01-14 17:22:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/edit
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/tipo_ivas/2/edit]
+
+
+Processing TipoIvasController#edit (for 127.0.0.1 at 2010-01-14 17:23:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/edit
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/tipo_ivas/2/edit]
+
+
+Processing TipoIvasController#edit (for 127.0.0.1 at 2010-01-14 17:23:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 2) [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/edit
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/tipo_ivas/2/edit]
+
+
+Processing TipoIvasController#index (for 127.0.0.1 at 2010-01-14 17:37:46) [GET]
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" [0m
+Rendering template within layouts/tipo_ivas
+Rendering tipo_ivas/index
+Completed in 672ms (View: 93, DB: 0) | 200 OK [http://localhost/tipo_ivas]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-14 17:37:51) [GET]
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Load (16.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 500ms (View: 468, DB: 16) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:37:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 3) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 3) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Completed in 110ms (View: 32, DB: 0) | 200 OK [http://localhost/invoices/3]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2010-01-14 17:38:14) [GET]
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" [0m
+Rendering template within layouts/invoices
+Rendering invoices/index
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 141ms (View: 94, DB: 0) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:38:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:42:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 250ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:42:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:42:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (16.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 563ms (View: 234, DB: 16) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:44:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (16.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 141ms (View: 78, DB: 16) | 200 OK [http://localhost/invoices/2]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2010-01-14 17:44:43) [DELETE]
+  Parameters: {"authenticity_token"=>"PsaTTpL+BJ1QoSCqpWdF7bD2oumVaauBP5NRyufCUNg=", "id"=>"14"}
+  [4;35;1mJob Load (16.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 14) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Invoice without an ID):
+  app/controllers/jobs_controller.rb:81:in `destroy'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/utente/dl/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:45:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInvoice Load (0.0ms)[0m   [0;1mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;35;1mJob Load (15.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;36;1mTipoIva Load (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 187ms (View: 63, DB: 15) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:49:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;35;1mCustomer Load (0.0ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 453ms (View: 234, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2010-01-14 17:49:30) [DELETE]
+  Parameters: {"authenticity_token"=>"PsaTTpL+BJ1QoSCqpWdF7bD2oumVaauBP5NRyufCUNg=", "id"=>"7"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 7) [0m
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Destroy (0.0ms)[0m   [0;1mDELETE FROM "jobs" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 20642ms (DB: 0) | 302 Found [http://localhost/jobs/7]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:49:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 140ms (View: 46, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:51:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 250ms (View: 203, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:51:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:52:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (15.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 265ms (View: 188, DB: 15) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:52:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 17:52:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 453ms (View: 250, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:52:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 17:54:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 500ms (View: 31, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:54:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 360ms (View: 94, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 17:56:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 218ms (View: 31, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:56:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 110ms (View: 47, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 17:56:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 422ms (View: 31, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:56:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 17:57:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 218ms (View: 47, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:57:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 250ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 17:58:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (16.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (15.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 219ms (View: 47, DB: 31) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 17:58:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 62, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 18:03:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 282ms (View: 31, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 18:03:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 18:04:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 266ms (View: 31, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 18:04:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (16.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 63, DB: 16) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 18:05:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 282ms (View: 31, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 18:05:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices/2]
+
+
+Processing InvoicesController#print (for 127.0.0.1 at 2010-01-14 18:05:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering invoices/print
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Redirected to http://localhost:3000/invoices/2
+Completed in 266ms (View: 47, DB: 0) | 302 Found [http://localhost/invoices/print/2]
+
+
+Processing InvoicesController#show (for 127.0.0.1 at 2010-01-14 18:05:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInvoice Load (0.0ms)[0m   [0mSELECT * FROM "invoices" WHERE ("invoices"."id" = 2) [0m
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".invoice_id = 2) [0m
+  [4;35;1mTipoIva Load (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_ivas" WHERE ("tipo_ivas"."id" = 1) [0m
+Rendering template within layouts/invoices
+Rendering invoices/show
+  [4;36;1mCustomer Load (0.0ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/invoices/2]

@@ -52,7 +52,7 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 table.invoice {
-    width: 80%;
+    width: 90%;
 	border-width: 1px 1px 1px 1px;
 	border-spacing: 2px;
 	border-style: outset outset outset outset;

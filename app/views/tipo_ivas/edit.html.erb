@@ -1,4 +1,4 @@
-<h1>Editing tipo_iva</h1>
+<h1>Modifica Aliquota</h1>
 
 <% form_for(@tipo_iva) do |f| %>
   <%= f.error_messages %>
@@ -11,8 +11,9 @@
 	<td><%= f.text_field :aliquota %></td>
   </tr>
  </table>
+ <p>
     <%= f.submit 'Aggiorna Aliquota' %>
-  </p>
+</p>
 <% end %>
-
+<br />
 <%= link_to 'Torna a Gestione Aliquote', tipo_ivas_path, :class=>'commandbutton' %>

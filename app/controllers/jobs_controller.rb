@@ -46,7 +46,7 @@ class JobsController < ApplicationController
     
     respond_to do |format|
       if @job.save
-        flash[:notice] = 'La voce è stata aggiunta con successo alla fattura!'
+        flash[:notice] = "La voce e' stata aggiunta con successo alla fattura!"
         format.html { redirect_to(@job.invoice) }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else
@@ -76,11 +76,13 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.xml
   def destroy
-    @job = Job.find(params[:id])
-    @job.destroy
 
+    @job = Job.find(params[:id])
+	@invoice = @job.invoice
+    @job.destroy
+	 flash[:notice] = "La voce e' stata rimossa."
     respond_to do |format|
-      format.html { redirect_to(jobs_url) }
+      format.html { redirect_to(@invoice) }
       format.xml  { head :ok }
     end
   end

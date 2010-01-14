@@ -1,14 +1,18 @@
 <style>
+@page { margin: 15mm }
+
 table {
 	font: 11px/24px Verdana, Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
-	width: 600px;
+	width: 700px;
 	border:2px solid gray;
+	
 	}
 
 th {
 	padding: 0 0.5em;
 	text-align: left;
+	background: #EEF;
 	}
 	
 td.box {
@@ -107,11 +111,11 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 </td>
 </tr>
 <tr>
-	<th class="qty">Quantita</th>
+	<th class="qty">Quantita'</th>
     <th colspan="2">Descrizione</th>
     <th>Iva%</th>
-    <th>Imponibile</th>
-	<th>Importo</th>
+    <th>Imponibile €</th>
+	<th>Importo €</th>
     
   </tr>
 <% @invoice.jobs.each do |job| %>
@@ -127,11 +131,11 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 <% end %>
 <tr>
 <td colspan="4" class="invisible"></td>
-<td>Imponibile:</td><td class="total cash" colspan="2"><%= h importo_zeroes @tot_imponibile %></td>
+<td>Imponibile €:</td><td class="total cash" colspan="2"><%= h importo_zeroes @tot_imponibile %></td>
 </tr>
 <tr>
 <td colspan="4" class="invisible"></td>
-<td>Totale:</td><td class="total cash" colspan="2"><%= h importo_zeroes @totale %></td>
+<td>Totale €:</td><td class="total cash" colspan="2"><%= h importo_zeroes @totale %></td>
 </tr>
 <tr>
 <td colspan="4">Annotazioni:</td></tr>

@@ -1,6 +1,6 @@
 <table class="invoice">
 <tr>
-<td colspan="3" rowspan="4">
+<td colspan="4" rowspan="4">
 <h2>Fontana Roberto</h2>
 <p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>
 C.F. 	FNTRRT72P11C957W <br />
@@ -29,25 +29,26 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 <tr>
 <td colspan="3">Fattura num. <%=h @invoice.codice %>
 </td>
-<td colspan="2">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") %>
+<td colspan="3">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") %>
 </td>
 </tr>
 <tr>
-	<td>Quantità</td>
-    <td>Descrizione</td>
+	<td>Quantita'</td>
+    <td colspan="2">Descrizione</td>
     <td>Iva%</td>
     <td>Imponibile</td>
 	<td>Importo</td>
-    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->
+    
   </tr>
 <% @invoice.jobs.each do |job| %>
   <tr>
 	<td><%=h job.qty %></td>
+	<td><%= link_to (image_tag "delete.gif", {:alt => 'Elimina Voce', :title => 'Elimina Voce', :class=>'noborder'}), job, :confirm => 'Vuoi davvero eliminare questa voce dalla fattura?', :method => :delete %></td>
     <td><%=h job.descrizione %></td>
     <td><%=h job.tipo_iva.aliquota %></td>
     <td class="cash"><%=h importo_zeroes job.importo %></td>
 	<td class="cash"><%=h  importo_zeroes (job.importo + (job.importo * job.tipo_iva.aliquota / 100)) %></td>
-    <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->
+    <!--td><= link_to , job, :confirm => 'Are you sure?', :method => :delete %></td-->
   </tr>
 <% end %>
 <tr>
@@ -60,7 +61,7 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 </tr>
 <tr>
 <td >Annotazioni:</td></tr>
-<td colspan="5">
+<td colspan="6">
 <%=h @invoice.descrizione %>
 </td>
 </table>
@@ -70,7 +71,7 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 </td><td>
 <%= link_to 'Modifica Intestatario o annotazioni', edit_invoice_path(@invoice), :class=>'commandbutton' %> 
 </td><td class="commandbutton">
-<%= link_to 'Stampa', :controller=>:invoices, :action=>"print", :id=>@invoice  %> 
+<%= link_to 'Salva PDF', :controller=>:invoices, :action=>"print", :id=>@invoice  %> 
 </td><td>
 <%= link_to 'Torna ad Elenco Fatture', invoices_path, :class=>'commandbutton' %>
 </td></tr></table>
