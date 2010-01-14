@@ -1,0 +1,66 @@
+<table class="printout">
+<tr>
+<td colspan="3" rowspan="4" class="titlebr">
+<h2>Fontana Roberto</h2>
+<p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>
+C.F. 	FNTRRT72P11C957W <br />
+P.IVA 04167380262	<br />
+N. REA CCIAA TV 328530
+</td>
+<td colspan="2" rowspan="1">
+<h4>Spett.le ditta</h4>
+</td>
+
+</tr>
+<tr>
+
+<td colspan="2" rowspan="3">
+<h3><%=h @invoice.customer.ragione_sociale %><br />
+<%=h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" %></h3><br />
+<%=h @invoice.customer.indirizzo %><br />
+<%=h "#{@invoice.customer.cap} #{@invoice.customer.comune}" %><br />
+P. Iva <%=h @invoice.customer.p_iva %><br />
+C. F. <%=h @invoice.customer.cod_fisc %>
+</td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td colspan="3">Fattura num. <%=h @invoice.codice %>
+</td>
+<td colspan="2">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") %>
+</td>
+</tr>
+<tr>
+	<th>Quantita</th>
+    <th>Descrizione</th>
+    <th>Iva%</th>
+    <th>Imponibile</th>
+	<th>Importo</th>
+    
+  </tr>
+<% @invoice.jobs.each do |job| %>
+  <tr>
+	<td><%=h job.qty %></td>
+    <td><%=h job.descrizione %></td>
+    <td><%=h job.tipo_iva.aliquota %></td>
+    <td><%=h job.importo %></td>
+	<td><%=h job.importo + (job.importo * job.tipo_iva.aliquota / 100) %></td>
+    
+  </tr>
+<% end %>
+<tr>
+<td colspan="3"></td>
+<td>Imponibile:</td><td><%= h @tot_imponibile %></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td>Totale:</td><td><%= h @totale %></td>
+</tr>
+<tr>
+<td >Annotazioni:</td></tr>
+<td colspan="5">
+<%=h @invoice.descrizione %>
+</td>
+</table>

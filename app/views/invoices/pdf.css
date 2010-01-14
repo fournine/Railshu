@@ -1,0 +1,27 @@
+
+table.printout {
+	border: 3px solid black;
+	border-spacing: 3px;
+	
+	border-collapse: separate;
+	background-color: #FFFFFF;
+}
+table.printout th {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: hidden hidden hidden hidden;
+	border-color: blue blue blue blue;
+	background-color: #08FFFF;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+table.printout td {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: hidden hidden hidden hidden;
+	border-color: blue blue blue blue;
+	background-color: #FFFFF0;
+	-moz-border-radius: 0px 0px 0px 0px;
+	
+.titlebr {
+	border-width: 2px 2px 2px 2px;
+}
