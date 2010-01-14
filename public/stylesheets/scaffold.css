@@ -112,6 +112,9 @@ text-align: center;
 	width:2%;
 }
 
+td.cash {
+	text-align:right;
+	}
 .noborder {
 	border-width: 0px;
 	}

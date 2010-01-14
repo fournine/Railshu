@@ -1,42 +1,85 @@
-<style type="text/css">
-table.printout {
-	border-width: 1px 1px 1px 1px;
-	border-spacing: 3px;
-	border-style: dotted dotted dotted dotted;
-	border-color: gray gray gray gray;
-	border-collapse: separate;
-	background-color: #FFFFFF;
-}
-table.printout th {
-	border-width: 1px 1px 1px 1px;
-	padding: 1px 1px 1px 1px;
-	border-style: hidden hidden hidden hidden;
-	border-color: blue blue blue blue;
-	background-color: #08FFFF;
-	-moz-border-radius: 0px 0px 0px 0px;
-}
-table.printout td {
-	border-width: 1px 1px 1px 1px;
-	padding: 1px 1px 1px 1px;
-	border-style: hidden hidden hidden hidden;
-	border-color: blue blue blue blue;
-	background-color: #FFFFF0;
-	-moz-border-radius: 0px 0px 0px 0px;
+<style>
+table {
+	font: 11px/24px Verdana, Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 600px;
+	border:2px solid gray;
+	}
+
+th {
+	padding: 0 0.5em;
+	text-align: left;
+	}
 	
-.titlebr {
-	border-width: 2px 2px 2px 2px;
-}
+td.box {
+	border: 1px solid darkgray;
+	}
+
+tr.yellow td {
+	border-top: 1px solid #FB7A31;
+	border-bottom: 1px solid #FB7A31;
+	background: #FFC;
+	}
+	
+tr.lightyellow td {
+	border-top: 1px solid #FB7A31;
+	border-bottom: 1px solid #FB7A31;
+	background: #FFD;
+	}
+
+td {
+	border-bottom: 1px solid #CCC;
+	padding: 0 0.5em;
+	}
+	
+td.desc {
+	text-align:left;
+	}
+
+td:first-child {
+	width: 190px;
+	}
+	
+td.annotazioni {
+	border-top: 2px solid darkgray;
+	font-style:italic;
+	}
+
+td+td {
+	border-left: 1px solid #CCC;
+	text-align: center;
+	}
+	
+td.cash {
+	font-family: monospace;
+	text-align: right;
+	}
+td.total {
+	font-weight: bold;
+	}
+td.invisible {
+	border: none;
+	}
+	
+th.qty {
+	width: 1%;
+	}
+td.qty {
+	width: 1%;
+	}
+.address {
+	font-size: 10px;
+	}
+
 </style>
-
-
-<table class="printout">
+<table>
 <tr>
-<td colspan="3" rowspan="4" class="titlebr">
+<td colspan="4" rowspan="4" class="box">
 <h2>Fontana Roberto</h2>
-<p>Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)</p>
+<p class="address">Via J.F.Kennedy 34 <br /> Pieve di Soligo (TV)<br />
 C.F. 	FNTRRT72P11C957W <br />
 P.IVA 04167380262	<br />
-N. REA CCIAA TV 328530
+N. REA CCIAA TV 328530</p>
 </td>
 <td colspan="2" rowspan="1">
 <h4>Spett.le ditta</h4>
@@ -45,7 +88,7 @@ N. REA CCIAA TV 328530
 </tr>
 <tr>
 
-<td colspan="2" rowspan="3">
+<td colspan="3" rowspan="3" class="box">
 <h3><%=h @invoice.customer.ragione_sociale %><br />
 <%=h "#{@invoice.customer.nome} #{@invoice.customer.cognome}" %></h3><br />
 <%=h @invoice.customer.indirizzo %><br />
@@ -60,38 +103,39 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 <tr>
 <td colspan="3">Fattura num. <%=h @invoice.codice %>
 </td>
-<td colspan="2">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") %>
+<td colspan="3">del: <%=h (@invoice.data_fattura || @invoice.created_at).strftime("%d/%m/%Y") %>
 </td>
 </tr>
 <tr>
-	<th>Quantità</th>
-    <th>Descrizione</th>
+	<th class="qty">Quantita</th>
+    <th colspan="2">Descrizione</th>
     <th>Iva%</th>
     <th>Imponibile</th>
 	<th>Importo</th>
     
   </tr>
 <% @invoice.jobs.each do |job| %>
-  <tr>
-	<td><%=h job.qty %></td>
-    <td><%=h job.descrizione %></td>
+  <tr class="<%= cycle("yellow", "lightyellow") -%>">
+
+	<td class="qty"><%=h job.qty %></td>
+    <td class="desc" colspan="2"><%=h job.descrizione %></td>
     <td><%=h job.tipo_iva.aliquota %></td>
-    <td><%=h job.importo %></td>
-	<td><%=h job.importo + (job.importo * job.tipo_iva.aliquota / 100) %></td>
+    <td class="cash"><%=h importo_zeroes job.importo %></td>
+	<td class="cash"><%=h importo_zeroes(job.importo + (job.importo * job.tipo_iva.aliquota / 100)) %></td>
     
   </tr>
 <% end %>
 <tr>
-<td colspan="3"></td>
-<td>Imponibile:</td><td><%= h @tot_imponibile %></td>
+<td colspan="4" class="invisible"></td>
+<td>Imponibile:</td><td class="total cash" colspan="2"><%= h importo_zeroes @tot_imponibile %></td>
 </tr>
 <tr>
-<td colspan="3"></td>
-<td>Totale:</td><td><%= h @totale %></td>
+<td colspan="4" class="invisible"></td>
+<td>Totale:</td><td class="total cash" colspan="2"><%= h importo_zeroes @totale %></td>
 </tr>
 <tr>
-<td >Annotazioni:</td></tr>
-<td colspan="5">
+<td colspan="4">Annotazioni:</td></tr>
+<td class="annotazioni" colspan="6">
 <%=h @invoice.descrizione %>
 </td>
 </table>

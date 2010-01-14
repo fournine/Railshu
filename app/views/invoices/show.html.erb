@@ -45,18 +45,18 @@ C. F. <%=h @invoice.customer.cod_fisc %>
 	<td><%=h job.qty %></td>
     <td><%=h job.descrizione %></td>
     <td><%=h job.tipo_iva.aliquota %></td>
-    <td><%=h job.importo %></td>
-	<td><%=h job.importo + (job.importo * job.tipo_iva.aliquota / 100) %></td>
+    <td class="cash"><%=h importo_zeroes job.importo %></td>
+	<td class="cash"><%=h  importo_zeroes (job.importo + (job.importo * job.tipo_iva.aliquota / 100)) %></td>
     <!--td><= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td-->
   </tr>
 <% end %>
 <tr>
 <td colspan="3">&nbsp;</td>
-<td>Imponibile:</td><td><%= h @tot_imponibile %></td>
+<td>Imponibile:</td><td class="cash"><%= h importo_zeroes @tot_imponibile %></td>
 </tr>
 <tr>
 <td colspan="3">&nbsp;</td>
-<td>Totale:</td><td><%= h @totale %></td>
+<td>Totale:</td><td class="cash"><%= h importo_zeroes @totale %></td>
 </tr>
 <tr>
 <td >Annotazioni:</td></tr>
