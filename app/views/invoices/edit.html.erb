@@ -1,4 +1,4 @@
-<h1>Editing invoice</h1>
+<h1>Modifica dati fattura</h1>
 
 <% form_for(@invoice) do |f| %>
   <%= f.error_messages %>
@@ -25,5 +25,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @invoice %> |
-<%= link_to 'Back', invoices_path %>
+
+<%= link_to 'Annulla e torna alla Fattura', invoice_path(@invoice), :class=>'commandbutton' %>
