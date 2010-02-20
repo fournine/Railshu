@@ -5,7 +5,8 @@
 
   <p>
     <%= f.label :codice, "Numero Fattura" %><br />
-    <%= f.text_field :codice, :value => (DateTime.now.strftime("%Y-%m-") + (Invoice.last.id + 1).to_s) %>
+    <%= f.text_field :codice, :value => numero_fattura %>
+    
   </p>
   <p>
     <%= f.label :data_fattura %><br />

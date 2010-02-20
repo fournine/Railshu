@@ -93,18 +93,19 @@ class InvoicesController < ApplicationController
 	  @tot_imponibile = @invoice.jobs.map{|x| x.importo}.inject(0){|sum,item| sum + item}
 	@totale = @invoice.jobs.map{|x| (x.importo) + (x.importo * x.tipo_iva.aliquota / 100)}.inject(0){|sum,item| sum + item}
 	  
-	  
-	  fl = File.new("#{@invoice.codice}.html", 'w')
+	  invoice_name = @invoice.data_fattura.strftime("%Y-%m-%d--") + @invoice.codice
+	  fl = File.new("#{invoice_name}.html", 'w')
 	  buffer = ''
 	  buffer = render_to_string :action => "print", :layout => false
 
 	  fl.puts buffer
 	  fl.close
 	   #debugger
-	  system("prince #{@invoice.codice}.html")
-	  FileUtils.rm "#{@invoice.codice}.html", :force => true
+	  system("prince #{invoice_name}.html")
+	  FileUtils.rm "#{invoice_name}.html", :force => true
+	  FileUtils.mv "#{invoice_name}.pdf", File.expand_path("~"), :force =>true	
 	  respond_to do |format|
-	   flash[:notice] = "Fattura salvata in #{@invoice.codice}.pdf"
+	   flash[:notice] = "Fattura salvata in #{invoice_name}.pdf"
 	  
 	   
       format.html { redirect_to(invoice_url(@invoice)) }
